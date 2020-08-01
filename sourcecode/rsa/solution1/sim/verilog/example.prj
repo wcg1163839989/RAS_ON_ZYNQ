@@ -1,0 +1,7 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_autobram_A_V.v"
+sv xil_defaultlib "AESL_autobram_B_V.v"
+sv xil_defaultlib "example.autotb.v"
+sv xil_defaultlib "example.v"
+sv xil_defaultlib "example_add_2048sbkb.v"
+

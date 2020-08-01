@@ -1,0 +1,257 @@
+==============================================================
+File generated on Fri Jul 31 15:54:23 +0800 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'montg_mul/montg_mul.cpp' ... 
+WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: montg_mul/montg_mul.cpp:17:7
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file montg_mul/montg_mul.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 138.926 ; gain = 53.746
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 138.926 ; gain = 53.746
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 141.316 ; gain = 56.137
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] montg_mul/montg_mul.cpp:22: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 149.488 ; gain = 64.309
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'OUTPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'INPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10).
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (montg_mul/montg_mul.cpp:20) to a process function for dataflow in function 'montgo'.
+INFO: [XFORM 203-721] Changing loop 'Loop_2_proc' (montg_mul/montg_mul.cpp:33) to a process function for dataflow in function 'montgo'.
+INFO: [XFORM 203-721] Changing loop 'Loop_3_proc' (montg_mul/montg_mul.cpp:48) to a process function for dataflow in function 'montgo'.
+INFO: [XFORM 203-712] Applying dataflow to function 'montgo', detected/extracted 3 process function(s): 
+	 'Loop_1_proc'
+	 'Loop_2_proc'
+	 'Loop_3_proc'.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 180.504 ; gain = 95.324
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 202.879 ; gain = 117.699
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'montgo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.924 seconds; current allocated memory: 159.897 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.122 seconds; current allocated memory: 160.143 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (3.903ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns).
+WARNING: [SCHED 204-21] The critical path in module 'Loop_2_proc' consists of the following:
+	'icmp' operation ('tmp_4_i', montg_mul/montg_mul.cpp:38) [28]  (3.9 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 160.220 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 160.346 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_3_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (3.853ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns).
+WARNING: [SCHED 204-21] The critical path in module 'Loop_3_proc' consists of the following:
+	'lshr' operation ('tmp_14', montg_mul/montg_mul.cpp:52) [43]  (3.85 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 160.451 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 160.642 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'montgo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.118 seconds; current allocated memory: 160.706 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.166 seconds; current allocated memory: 160.817 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2048s_12ns_2048_2_1' to 'montgo_lshr_2048sbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_shl_2048ns_12ns_2048_2_1' to 'montgo_shl_2048nscud' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'Loop_1_proc' is 8193 from HDL expression: (1'b1 == ap_CS_fsm_state4)
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2048sbkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_shl_2048nscud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.302 seconds; current allocated memory: 161.379 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_2_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'montgo_add_2050ns_2050ns_2050_2_1' to 'montgo_add_2050nsdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_add_2049s_2049ns_2049_2_1' to 'montgo_add_2049s_eOg' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'Loop_2_proc' is 6150 from HDL expression: (1'b1 == ap_CS_fsm_state3)
+INFO: [RTGEN 206-100] Generating core module 'montgo_add_2049s_eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_add_2050nsdEe': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_2_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.346 seconds; current allocated memory: 161.762 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_3_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2050ns_12ns_2050_7_1' to 'montgo_lshr_2050nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2050s_12ns_2050_2_1' to 'montgo_lshr_2050sg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2050nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2050sg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_3_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.324 seconds; current allocated memory: 162.205 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'montgo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_strb_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_strb_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'montgo' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'montgo'.
+INFO: [HLS 200-111]  Elapsed time: 0.339 seconds; current allocated memory: 162.645 MB.
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2048sbkb'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_shl_2048nscud'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'montgo_add_2050nsdEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'montgo_add_2049s_eOg_AddSubnS_1'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2050nfYi'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2050sg8j'
+INFO: [RTMG 210-285] Implementing FIFO 'p_Val2_2_loc_chann_U(fifo_w2048_d2_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'p_Val2_1_loc_chann_U(fifo_w2048_d2_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'p_Val2_3_cast_loc_s_U(fifo_w2049_d2_A)' using Block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 213.949 ; gain = 128.770
+INFO: [SYSC 207-301] Generating SystemC RTL for montgo.
+INFO: [VHDL 208-304] Generating VHDL RTL for montgo.
+INFO: [VLOG 209-307] Generating Verilog RTL for montgo.
+INFO: [HLS 200-112] Total elapsed time: 29.241 seconds; peak allocated memory: 162.645 MB.
+==============================================================
+File generated on Fri Jul 31 15:55:59 +0800 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'montg_mul/montg_mul.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 137.781 ; gain = 53.070
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 137.781 ; gain = 53.070
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 141.031 ; gain = 56.320
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] montg_mul/montg_mul.cpp:22: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 149.289 ; gain = 64.578
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'OUTPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'INPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 178.457 ; gain = 93.746
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 181.254 ; gain = 96.543
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'montgo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'montgo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (3.903ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns).
+WARNING: [SCHED 204-21] The critical path in module 'montgo' consists of the following:
+	'icmp' operation ('tmp_4', montg_mul/montg_mul.cpp:38) [120]  (3.9 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.313 seconds; current allocated memory: 130.850 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 131.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'montgo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'montgo' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2048s_12ns_2048_2_1' to 'montgo_lshr_2048sbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_shl_2048ns_12ns_2048_2_1' to 'montgo_shl_2048nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_add_2049ns_2049ns_2049_2_1' to 'montgo_add_2049nsdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_add_2050ns_2050ns_2050_2_1' to 'montgo_add_2050nseOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_add_2049s_2049ns_2049_2_1' to 'montgo_add_2049s_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2050ns_12ns_2050_7_1' to 'montgo_lshr_2050ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2050s_12ns_2050_2_1' to 'montgo_lshr_2050shbi' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'montgo' is 8192, found 2 HDL expressions with this fanout: (1'b1 == ap_CS_fsm_state5), (1'b1 == ap_CS_fsm_state4)
+INFO: [RTGEN 206-100] Generating core module 'montgo_add_2049nsdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_add_2049s_fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_add_2050nseOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2048sbkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2050ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2050shbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_shl_2048nscud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'montgo'.
+INFO: [HLS 200-111]  Elapsed time: 0.767 seconds; current allocated memory: 133.568 MB.
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2048sbkb'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_shl_2048nscud'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'montgo_add_2049nsdEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'montgo_add_2050nseOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'montgo_add_2049s_fYi_AddSubnS_2'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2050ng8j'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2050shbi'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 184.352 ; gain = 99.641
+INFO: [SYSC 207-301] Generating SystemC RTL for montgo.
+INFO: [VHDL 208-304] Generating VHDL RTL for montgo.
+INFO: [VLOG 209-307] Generating Verilog RTL for montgo.
+INFO: [HLS 200-112] Total elapsed time: 27.622 seconds; peak allocated memory: 133.568 MB.
+==============================================================
+File generated on Fri Jul 31 19:52:31 +0800 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.5ns.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

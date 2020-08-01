@@ -1,0 +1,671 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Jul 31 12:58:50 2020
+# Process ID: 9016
+# Current directory: E:/vivado2018_project/axi4stream_demo/axi4stream_demo.runs/design_1_example_0_0_synth_1
+# Command line: vivado.exe -log design_1_example_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_example_0_0.tcl
+# Log file: E:/vivado2018_project/axi4stream_demo/axi4stream_demo.runs/design_1_example_0_0_synth_1/design_1_example_0_0.vds
+# Journal file: E:/vivado2018_project/axi4stream_demo/axi4stream_demo.runs/design_1_example_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_example_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/vivado2018_project/axi4stream_demo/axi4stream_demo.ip_user_files'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx2018/Vivado/2018.3/data/ip'.
+Command: synth_design -top design_1_example_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16500 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 397.930 ; gain = 102.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_example_0_0' [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ip/design_1_example_0_0/synth/design_1_example_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'example' [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example.v:12]
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'example_AXILiteS_s_axi' [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_AXILiteS_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 4'b0000 
+	Parameter ADDR_GIE bound to: 4'b0100 
+	Parameter ADDR_IER bound to: 4'b1000 
+	Parameter ADDR_ISR bound to: 4'b1100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_AXILiteS_s_axi.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'example_AXILiteS_s_axi' (1#1) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_AXILiteS_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'example_x_V' [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_x_V.v:11]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 50 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter BufferCount bound to: 2 - type: integer 
+	Parameter MemLatency bound to: 1 - type: integer 
+	Parameter IndexWidth bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'example_x_V_memcore' [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_x_V_memcore.v:55]
+	Parameter DataWidth bound to: 16 - type: integer 
+	Parameter AddressRange bound to: 50 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'example_x_V_memcore_ram' [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_x_V_memcore.v:9]
+	Parameter DWIDTH bound to: 16 - type: integer 
+	Parameter AWIDTH bound to: 6 - type: integer 
+	Parameter MEM_SIZE bound to: 50 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_x_V_memcore.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'example_x_V_memcore_ram' (2#1) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_x_V_memcore.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'example_x_V_memcore' (3#1) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_x_V_memcore.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'example_x_V' (4#1) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example_x_V.v:11]
+INFO: [Synth 8-6157] synthesizing module 'Loop_1_proc' [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/Loop_1_proc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 2'b01 
+	Parameter ap_ST_fsm_state2 bound to: 2'b10 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/Loop_1_proc.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'Loop_1_proc' (5#1) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/Loop_1_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'Loop_add_loop_proc' [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/Loop_add_loop_proc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 11'b00000000001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 11'b00000000010 
+	Parameter ap_ST_fsm_pp0_stage1 bound to: 11'b00000000100 
+	Parameter ap_ST_fsm_pp0_stage2 bound to: 11'b00000001000 
+	Parameter ap_ST_fsm_pp0_stage3 bound to: 11'b00000010000 
+	Parameter ap_ST_fsm_pp0_stage4 bound to: 11'b00000100000 
+	Parameter ap_ST_fsm_pp0_stage5 bound to: 11'b00001000000 
+	Parameter ap_ST_fsm_pp0_stage6 bound to: 11'b00010000000 
+	Parameter ap_ST_fsm_pp0_stage7 bound to: 11'b00100000000 
+	Parameter ap_ST_fsm_pp0_stage8 bound to: 11'b01000000000 
+	Parameter ap_ST_fsm_pp0_stage9 bound to: 11'b10000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/Loop_add_loop_proc.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'Loop_add_loop_proc' (6#1) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/Loop_add_loop_proc.v:10]
+WARNING: [Synth 8-6014] Unused sequential element Loop_1_proc_U0_ap_ready_count_reg was removed.  [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example.v:392]
+WARNING: [Synth 8-6014] Unused sequential element Loop_add_loop_proc_U0_ap_ready_count_reg was removed.  [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example.v:400]
+INFO: [Synth 8-6155] done synthesizing module 'example' (7#1) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ipshared/f194/hdl/verilog/example.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_example_0_0' (8#1) [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ip/design_1_example_0_0/synth/design_1_example_0_0.v:58]
+WARNING: [Synth 8-3331] design example_x_V_memcore has unconnected port reset
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[31]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[30]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[29]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[28]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[27]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[26]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[25]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[24]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[23]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[22]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[21]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[20]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[19]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[18]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[17]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[16]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[15]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[14]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[13]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[12]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[11]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[10]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[9]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[8]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[6]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[5]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[4]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[3]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WDATA[2]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WSTRB[3]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WSTRB[2]
+WARNING: [Synth 8-3331] design example_AXILiteS_s_axi has unconnected port WSTRB[1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 457.977 ; gain = 162.297
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 457.977 ; gain = 162.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 457.977 ; gain = 162.297
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ip/design_1_example_0_0/constraints/example_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/vivado2018_project/axi4stream_demo/axi4stream_demo.srcs/sources_1/bd/design_1/ip/design_1_example_0_0/constraints/example_ooc.xdc] for cell 'inst'
+Parsing XDC File [E:/vivado2018_project/axi4stream_demo/axi4stream_demo.runs/design_1_example_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/vivado2018_project/axi4stream_demo/axi4stream_demo.runs/design_1_example_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 821.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 821.746 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 823.055 ; gain = 1.469
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 823.055 ; gain = 527.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 823.055 ; gain = 527.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  E:/vivado2018_project/axi4stream_demo/axi4stream_demo.runs/design_1_example_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 823.055 ; gain = 527.375
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'example_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'example_AXILiteS_s_axi'
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond1_i_fu_83_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_769_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_769_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "INPUT_ARR_dest_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_dest_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_id_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_id_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_keep_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_keep_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_last_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_last_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_strb_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_strb_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_user_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "INPUT_ARR_user_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_data_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_data_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_dest_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_dest_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_id_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_id_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_keep_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_keep_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_last_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_last_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_strb_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_strb_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_user_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OUTPUT_ARRR_user_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'example_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'example_AXILiteS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 823.055 ; gain = 527.375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 10    
+	   2 Input      2 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 8     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               18 Bit    Registers := 11    
+	               16 Bit    Registers := 8     
+	               11 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 13    
+	                2 Bit    Registers := 18    
+	                1 Bit    Registers := 111   
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 12    
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 11    
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 18    
+	   4 Input      2 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 56    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module example_AXILiteS_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module example_x_V_memcore_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+Module example_x_V 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+Module Loop_1_proc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module Loop_add_loop_proc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 9     
++---Registers : 
+	               18 Bit    Registers := 11    
+	               11 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 12    
+	                2 Bit    Registers := 13    
+	                1 Bit    Registers := 86    
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 14    
+	   4 Input      2 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 27    
+Module example 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[31]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[30]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[29]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[28]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[27]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[26]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[25]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[24]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[23]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[22]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[21]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[20]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[19]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[18]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[17]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[16]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[15]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[14]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[13]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[12]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[11]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[10]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[9]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[8]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[6]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[5]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[4]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[3]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WDATA[2]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WSTRB[3]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WSTRB[2]
+WARNING: [Synth 8-3331] design example has unconnected port s_axi_AXILiteS_WSTRB[1]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Loop_add_loop_proc_U0/ap_done_reg_reg )
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[4]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[5]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[6]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[8]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[9]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[10]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[11]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[12]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[13]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[14]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[15]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[16]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[17]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[18]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[19]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[20]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[21]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[22]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[23]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[24]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[25]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[26]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[27]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[28]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[29]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/example_AXILiteS_s_axi_U/rdata_reg[30]' (FDE) to 'inst/example_AXILiteS_s_axi_U/rdata_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\example_AXILiteS_s_axi_U/rdata_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (example_AXILiteS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module example.
+WARNING: [Synth 8-3332] Sequential element (example_AXILiteS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module example.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 823.055 ; gain = 527.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-----------------------------------------------------------------------------+----------------+----------------------+--------------------------------+
+|Module Name | RTL Object                                                                  | Inference      | Size (Depth x Width) | Primitives                     | 
++------------+-----------------------------------------------------------------------------+----------------+----------------------+--------------------------------+
+|inst        | x_V_U/gen_buffer[1].example_x_V_memcore_U/example_x_V_memcore_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1D x 32  RAM32X1D x 16   | 
+|inst        | x_V_U/gen_buffer[0].example_x_V_memcore_U/example_x_V_memcore_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1D x 32  RAM32X1D x 16   | 
+|inst        | y_V_U/gen_buffer[1].example_x_V_memcore_U/example_x_V_memcore_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1D x 32  RAM32X1D x 16   | 
+|inst        | y_V_U/gen_buffer[0].example_x_V_memcore_U/example_x_V_memcore_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1D x 32  RAM32X1D x 16   | 
++------------+-----------------------------------------------------------------------------+----------------+----------------------+--------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 823.055 ; gain = 527.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 919.688 ; gain = 624.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+-----------------------------------------------------------------------------+----------------+----------------------+--------------------------------+
+|Module Name | RTL Object                                                                  | Inference      | Size (Depth x Width) | Primitives                     | 
++------------+-----------------------------------------------------------------------------+----------------+----------------------+--------------------------------+
+|inst        | x_V_U/gen_buffer[1].example_x_V_memcore_U/example_x_V_memcore_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1D x 32  RAM32X1D x 16   | 
+|inst        | x_V_U/gen_buffer[0].example_x_V_memcore_U/example_x_V_memcore_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1D x 32  RAM32X1D x 16   | 
+|inst        | y_V_U/gen_buffer[1].example_x_V_memcore_U/example_x_V_memcore_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1D x 32  RAM32X1D x 16   | 
+|inst        | y_V_U/gen_buffer[0].example_x_V_memcore_U/example_x_V_memcore_ram_U/ram_reg | User Attribute | 64 x 16              | RAM16X1D x 32  RAM32X1D x 16   | 
++------------+-----------------------------------------------------------------------------+----------------+----------------------+--------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 928.512 ; gain = 632.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 928.512 ; gain = 632.832
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 928.512 ; gain = 632.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 928.512 ; gain = 632.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 928.512 ; gain = 632.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 928.512 ; gain = 632.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 928.512 ; gain = 632.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    10|
+|2     |LUT1     |     5|
+|3     |LUT2     |    38|
+|4     |LUT3     |   168|
+|5     |LUT4     |   119|
+|6     |LUT5     |   144|
+|7     |LUT6     |   235|
+|8     |RAM16X1D |   128|
+|9     |RAM32X1D |    64|
+|10    |FDRE     |   621|
+|11    |FDSE     |     4|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------+--------------------------+------+
+|      |Instance                                    |Module                    |Cells |
++------+--------------------------------------------+--------------------------+------+
+|1     |top                                         |                          |  1536|
+|2     |  inst                                      |example                   |  1536|
+|3     |    Loop_1_proc_U0                          |Loop_1_proc               |   183|
+|4     |    Loop_add_loop_proc_U0                   |Loop_add_loop_proc        |   744|
+|5     |    example_AXILiteS_s_axi_U                |example_AXILiteS_s_axi    |    54|
+|6     |    x_V_U                                   |example_x_V               |   296|
+|7     |      \gen_buffer[0].example_x_V_memcore_U  |example_x_V_memcore_3     |   119|
+|8     |        example_x_V_memcore_ram_U           |example_x_V_memcore_ram_6 |   119|
+|9     |      \gen_buffer[1].example_x_V_memcore_U  |example_x_V_memcore_4     |   159|
+|10    |        example_x_V_memcore_ram_U           |example_x_V_memcore_ram_5 |   159|
+|11    |    y_V_U                                   |example_x_V_0             |   255|
+|12    |      \gen_buffer[0].example_x_V_memcore_U  |example_x_V_memcore       |   119|
+|13    |        example_x_V_memcore_ram_U           |example_x_V_memcore_ram_2 |   119|
+|14    |      \gen_buffer[1].example_x_V_memcore_U  |example_x_V_memcore_1     |   119|
+|15    |        example_x_V_memcore_ram_U           |example_x_V_memcore_ram   |   119|
++------+--------------------------------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 928.512 ; gain = 632.832
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 928.512 ; gain = 267.754
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 928.512 ; gain = 632.832
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 202 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 928.512 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 192 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 128 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 64 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+110 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 928.512 ; gain = 641.121
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 928.512 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.runs/design_1_example_0_0_synth_1/design_1_example_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_example_0_0, cache-ID = 0f263e4d79ac3d52
+INFO: [Coretcl 2-1174] Renamed 14 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 928.512 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.runs/design_1_example_0_0_synth_1/design_1_example_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_example_0_0_utilization_synth.rpt -pb design_1_example_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 31 12:59:31 2020...

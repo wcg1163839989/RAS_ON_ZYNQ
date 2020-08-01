@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+  <sourceFile name="montg_mul/montg_mul.cpp">
+    <directive functionName="montgo" label=" " functionLabel=" ">
+      <pragma name="INTERFACE">
+        <option name="s_axilite" value=" " positionalBoolean="mode"/>
+        <option name="port" value="return" positionalBoolean="4"/>
+      </pragma>
+      <pragma name="INTERFACE">
+        <option name="axis" value=" " positionalBoolean="mode"/>
+        <option name="off" value=" " positionalBoolean="register_mode"/>
+        <option name="port" value="A" positionalBoolean="4"/>
+        <option name="name" value="INPUT_ARR"/>
+      </pragma>
+      <pragma name="INTERFACE">
+        <option name="axis" value=" " positionalBoolean="mode"/>
+        <option name="off" value=" " positionalBoolean="register_mode"/>
+        <option name="port" value="C" positionalBoolean="4"/>
+        <option name="name" value="OUTPUT_ARR"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+</AutoPilot:ProjectResources>

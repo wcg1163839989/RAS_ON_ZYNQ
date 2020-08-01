@@ -1,0 +1,8 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../mongt_mul_tb.cpp in debug mode
+   Compiling ../../../mongt_mul.cpp in debug mode
+   Generating csim.exe
+Success: HW and SW results match
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

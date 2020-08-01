@@ -1,0 +1,802 @@
+INFO-FLOW: Workspace E:/vivadoHLS_project/montg_mul/solution2 opened at Fri Jul 31 15:55:59 +0800 2020
+Execute     config_clock -quiet -name default -period 4 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.116 sec.
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.119 sec.
+Command     ap_source done; 0.119 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.225 sec.
+Execute   set_part xc7z020clg400-1 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 250MHz -name default 
+Execute   source ./montg_mul/solution2/directives.tcl 
+Execute     set_directive_interface -mode s_axilite montgo 
+INFO-FLOW: Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+Execute     set_directive_interface -mode axis -register -register_mode both -name INPUT_ARR montgo A 
+INFO-FLOW: Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredA name=INPUT_ARR 
+Execute     set_directive_interface -mode axis -register -register_mode both -name OUTPUT_ARR montgo C 
+INFO-FLOW: Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredA name=INPUT_ARR 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredC name=OUTPUT_ARR 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'montg_mul/montg_mul.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling montg_mul/montg_mul.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted montg_mul/montg_mul.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx2018/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "montg_mul/montg_mul.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx2018/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx2018/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E montg_mul/montg_mul.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp
+Command       clang done; 0.779 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx2018/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.971 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx2018/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp"  -o "E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx2018/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx2018/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/useless.bc
+Command       clang done; 1.237 sec.
+INFO-FLOW: Done: GCC PP time: 3 seconds per iteration
+INFO-FLOW: Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredA name=INPUT_ARR 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredC name=OUTPUT_ARR 
+INFO-FLOW: Setting directive 'INTERFACE' s_axilite=positionBoolean0mode port=positionBooleanTextRequiredreturn 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredA name=INPUT_ARR 
+INFO-FLOW: Setting directive 'INTERFACE' axis=positionBoolean0mode register=positionBoolean1 both=positionBoolean0register_mode port=positionBooleanTextRequiredC name=OUTPUT_ARR 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp std=gnu++98 -directive=E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx2018/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/.systemc_flag -quiet -fix-errors E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.924 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp std=gnu++98 -directive=E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx2018/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/all.directive.json -quiet -fix-errors E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.802 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx2018/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/xilinx-dataflow-lawyer.montg_mul.pp.0.cpp.diag.yml E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/xilinx-dataflow-lawyer.montg_mul.pp.0.cpp.out.log 2> E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/xilinx-dataflow-lawyer.montg_mul.pp.0.cpp.err.log 
+Command       ap_eval done; 0.801 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx2018/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/tidy-3.1.montg_mul.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/tidy-3.1.montg_mul.pp.0.cpp.out.log 2> E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/tidy-3.1.montg_mul.pp.0.cpp.err.log 
+Command         ap_eval done; 2.234 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx2018/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/xilinx-legacy-rewriter.montg_mul.pp.0.cpp.out.log 2> E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/xilinx-legacy-rewriter.montg_mul.pp.0.cpp.err.log 
+Command         ap_eval done; 0.919 sec.
+Command       tidy_31 done; 11.262 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 13.9 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx2018/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx2018/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.bc" 
+INFO-FLOW: exec D:/Xilinx2018/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx2018/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx2018/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.bc
+Command       clang done; 1.331 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montg_mul.g.bc -hls-opt -except-internalize montgo -LD:/Xilinx2018/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g 
+Command       llvm-ld done; 0.834 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 137.781 ; gain = 53.070
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 137.781 ; gain = 53.070
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.pp.bc -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Xilinx2018/Vivado/2018.3/win64/lib -lfloatconversion -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.407 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top montgo -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g.0.bc -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 141.031 ; gain = 56.320
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g.1.bc -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g.2.prechk.bc -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] montg_mul/montg_mul.cpp:22: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 149.289 ; gain = 64.578
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.g.1.bc to E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.o.1.bc -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'OUTPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'INPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10).
+Command         transform done; 0.18 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.o.1.tmp.bc -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.112 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 178.457 ; gain = 93.746
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.o.2.bc -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 0.177 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:24 . Memory (MB): peak = 181.254 ; gain = 96.543
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 1.192 sec.
+Command     elaborate done; 23.498 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'montgo' ...
+Execute       ap_set_top_model montgo 
+Execute       get_model_list montgo -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model montgo 
+Execute       get_model_list montgo -filter all-wo-channel 
+INFO-FLOW: Model list for configure: montgo
+INFO-FLOW: Configuring Module : montgo ...
+Execute       set_default_model montgo 
+Execute       apply_spec_resource_limit montgo 
+INFO-FLOW: Model list for preprocess: montgo
+INFO-FLOW: Preprocessing Module: montgo ...
+Execute       set_default_model montgo 
+Execute       cdfg_preprocess -model montgo 
+Execute       rtl_gen_preprocess montgo 
+INFO-FLOW: Model list for synthesis: montgo
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'montgo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model montgo 
+Execute       schedule -model montgo 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (3.903ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns).
+WARNING: [SCHED 204-21] The critical path in module 'montgo' consists of the following:
+	'icmp' operation ('tmp_4', montg_mul/montg_mul.cpp:38) [120]  (3.9 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.313 seconds; current allocated memory: 130.850 MB.
+Execute       report -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+Execute       db_write -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.sched.adb -f 
+INFO-FLOW: Finish scheduling montgo.
+Execute       set_default_model montgo 
+Execute       bind -model montgo 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=montgo
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.172 seconds; current allocated memory: 131.477 MB.
+Execute       report -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.verbose.bind.rpt -verbose -f 
+Command       report done; 0.116 sec.
+Execute       db_write -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.bind.adb -f 
+INFO-FLOW: Finish binding montgo.
+Execute       get_model_list montgo -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess montgo 
+INFO-FLOW: Model list for RTL generation: montgo
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'montgo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model montgo -vendor xilinx -mg_file E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/INPUT_ARR_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'montgo/OUTPUT_ARR_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'montgo' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2048s_12ns_2048_2_1' to 'montgo_lshr_2048sbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_shl_2048ns_12ns_2048_2_1' to 'montgo_shl_2048nscud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_add_2049ns_2049ns_2049_2_1' to 'montgo_add_2049nsdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_add_2050ns_2050ns_2050_2_1' to 'montgo_add_2050nseOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_add_2049s_2049ns_2049_2_1' to 'montgo_add_2049s_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2050ns_12ns_2050_7_1' to 'montgo_lshr_2050ng8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'montgo_lshr_2050s_12ns_2050_2_1' to 'montgo_lshr_2050shbi' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'montgo' is 8192, found 2 HDL expressions with this fanout: (1'b1 == ap_CS_fsm_state5), (1'b1 == ap_CS_fsm_state4)
+INFO: [RTGEN 206-100] Generating core module 'montgo_add_2049nsdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_add_2049s_fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_add_2050nseOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2048sbkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2050ng8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_lshr_2050shbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'montgo_shl_2048nscud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'montgo'.
+Command       create_rtl_model done; 0.577 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.767 seconds; current allocated memory: 133.568 MB.
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute       gen_rtl montgo -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/vivadoHLS_project/montg_mul/solution2/syn/systemc/montgo -synmodules montgo 
+Execute       gen_rtl montgo -istop -style xilinx -f -lang vhdl -o E:/vivadoHLS_project/montg_mul/solution2/syn/vhdl/montgo 
+Execute       gen_rtl montgo -istop -style xilinx -f -lang vlog -o E:/vivadoHLS_project/montg_mul/solution2/syn/verilog/montgo 
+Execute       export_constraint_db -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.constraint.tcl -f -tool general 
+Execute       report -model montgo -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.design.xml -verbose -f -dv 
+Execute       report -model montgo -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 0.137 sec.
+Execute       gen_tb_info montgo -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo -p E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db 
+Execute       report -model montgo -o E:/vivadoHLS_project/montg_mul/solution2/syn/report/montgo_csynth.rpt -f 
+Execute       report -model montgo -o E:/vivadoHLS_project/montg_mul/solution2/syn/report/montgo_csynth.xml -f -x 
+Execute       report -model montgo -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.verbose.rpt -verbose -f 
+Command       report done; 0.164 sec.
+Execute       db_write -model montgo -o E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.adb -f 
+Command       db_write done; 0.113 sec.
+Execute       sc_get_clocks montgo 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain montgo 
+INFO-FLOW: Model list for RTL component generation: montgo
+INFO-FLOW: Handling components in module [montgo] ... 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+INFO-FLOW: Found component montgo_lshr_2048sbkb.
+INFO-FLOW: Append model montgo_lshr_2048sbkb
+INFO-FLOW: Found component montgo_shl_2048nscud.
+INFO-FLOW: Append model montgo_shl_2048nscud
+INFO-FLOW: Found component montgo_add_2049nsdEe.
+INFO-FLOW: Append model montgo_add_2049nsdEe
+INFO-FLOW: Found component montgo_add_2050nseOg.
+INFO-FLOW: Append model montgo_add_2050nseOg
+INFO-FLOW: Found component montgo_add_2049s_fYi.
+INFO-FLOW: Append model montgo_add_2049s_fYi
+INFO-FLOW: Found component montgo_lshr_2050ng8j.
+INFO-FLOW: Append model montgo_lshr_2050ng8j
+INFO-FLOW: Found component montgo_lshr_2050shbi.
+INFO-FLOW: Append model montgo_lshr_2050shbi
+INFO-FLOW: Found component montgo_AXILiteS_s_axi.
+INFO-FLOW: Append model montgo_AXILiteS_s_axi
+INFO-FLOW: Append model montgo
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: montgo_lshr_2048sbkb montgo_shl_2048nscud montgo_add_2049nsdEe montgo_add_2050nseOg montgo_add_2049s_fYi montgo_lshr_2050ng8j montgo_lshr_2050shbi montgo_AXILiteS_s_axi montgo
+INFO-FLOW: To file: write model montgo_lshr_2048sbkb
+INFO-FLOW: To file: write model montgo_shl_2048nscud
+INFO-FLOW: To file: write model montgo_add_2049nsdEe
+INFO-FLOW: To file: write model montgo_add_2050nseOg
+INFO-FLOW: To file: write model montgo_add_2049s_fYi
+INFO-FLOW: To file: write model montgo_lshr_2050ng8j
+INFO-FLOW: To file: write model montgo_lshr_2050shbi
+INFO-FLOW: To file: write model montgo_AXILiteS_s_axi
+INFO-FLOW: To file: write model montgo
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d E:/vivadoHLS_project/montg_mul/solution2
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.111 sec.
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.114 sec.
+Command       ap_source done; 0.114 sec.
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=4.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2048sbkb'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_shl_2048nscud'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'montgo_add_2049nsdEe_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'montgo_add_2050nseOg_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'montgo_add_2049s_fYi_AddSubnS_2'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2050ng8j'
+INFO: [RTMG 210-286] Generating pipelined shifter : 'montgo_lshr_2050shbi'
+Execute         source ./AXILiteS.slave.tcl 
+Execute         is_m_axi_addr64 
+Command       ap_source done; 0.429 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d E:/vivadoHLS_project/montg_mul/solution2
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.114 sec.
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.117 sec.
+Command       ap_source done; 0.117 sec.
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=montgo xml_exists=0
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.constraint.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=14
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=9 #gSsdmPorts=28
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.constraint.tcl 
+Execute       sc_get_clocks montgo 
+Execute       source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 184.352 ; gain = 99.641
+INFO: [SYSC 207-301] Generating SystemC RTL for montgo.
+INFO: [VHDL 208-304] Generating VHDL RTL for montgo.
+INFO: [VLOG 209-307] Generating Verilog RTL for montgo.
+Command     autosyn done; 3.409 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 26.92 sec.
+Command ap_source done; 27.231 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace E:/vivadoHLS_project/montg_mul/solution2 opened at Fri Jul 31 19:52:31 +0800 2020
+Execute     config_clock -quiet -name default -period 4 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.135 sec.
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.219 sec.
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.232 sec.
+Command     ap_source done; 0.239 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_bind -effort=medium 
+Execute     config_sdx -optimization_level=none 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_bind -effort 
+Execute       get_config_schedule -effort 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_schedule -effort=medium 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+Execute       config_schedule -effort=medium 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_sdx -optimization_level=none 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+Execute       config_sdx -optimization_level=none 
+Execute         get_config_export -vivado_synth_design_args 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_synth_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute         get_config_bind -effort 
+Execute         get_config_schedule -effort 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_schedule -relax_ii_for_timing=0 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+Execute       config_schedule -relax_ii_for_timing=0 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -auto_prefix 
+Execute       get_config_rtl -enable_maxiConservative 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute         get_clock_period -default -name=default 
+Execute         config_clock -quiet -name default -uncertainty 0.5 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.5ns.
+Command   open_solution done; 0.612 sec.
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -acc 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -kernel_drc 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sdaccel 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_sdx -target 
+Execute     get_config_rtl -auto_prefix 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -rtl verilog -sdx-target none
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.121 sec.
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.124 sec.
+Command     ap_source done; 0.124 sec.
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=4.000 (was NA)
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.109 sec.
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.112 sec.
+Command     ap_source done; 0.112 sec.
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=montgo xml_exists=1
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.compgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.constraint.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
+INFO-FLOW: DBG:CMD:       copy ip_driver_dir 1_0 E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/driver
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=28
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=montgo
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=montgo
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.rtl_wrap.cfg.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.constraint.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.constraint.tcl 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/montgo.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       copy-tb-rtl-files
+INFO-FLOW: DBG:CMD:       copy-tb-data-files
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO-FLOW: DBG:CMD: read_platform_lib E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/vivadoHLS_project/montg_mul/solution2/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.111 sec.
+Execute         source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.113 sec.
+Command     ap_source done; 0.113 sec.
+Execute     source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx2018/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:     exec E:/vivadoHLS_project/montg_mul/solution2/impl/ip/pack.bat
+Command   export_design done; 9.164 sec.
+Command ap_source done; 9.795 sec.
+Execute cleanup_all 

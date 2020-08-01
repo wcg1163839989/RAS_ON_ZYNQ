@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="montg_mul.cpp" path="E:\vivadoHLS_project\montg_mul\montg_mul.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="montg_mul_tb.cpp" path="E:\vivadoHLS_project\montg_mul\montg_mul_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

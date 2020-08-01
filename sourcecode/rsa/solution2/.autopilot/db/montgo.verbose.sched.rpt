@@ -1,0 +1,497 @@
+
+
+================================================================
+== Vivado HLS Report for 'montgo'
+================================================================
+* Date:           Fri Jul 31 15:56:23 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        montg_mul
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|     3.903|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  17731|  17731|  17731|  17731|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    640|    640|         5|          -|          -|   128|    no    |
+        |- Loop 2  |  16384|  16384|         8|          -|          -|  2048|    no    |
+        |- Loop 3  |    704|    704|        11|          -|          -|    64|    no    |
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 25
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+	7  / (exitcond1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	2  / true
+7 --> 
+	8  / (!exitcond2)
+	15  / (exitcond2)
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	7  / true
+15 --> 
+	16  / (!exitcond)
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	15  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %INPUT_ARR_data_V), !map !129"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %INPUT_ARR_keep_V), !map !135"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %INPUT_ARR_strb_V), !map !139"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %INPUT_ARR_user_V), !map !143"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %INPUT_ARR_last_V), !map !147"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %INPUT_ARR_id_V), !map !151"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %INPUT_ARR_dest_V), !map !155"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %OUTPUT_ARR_data_V), !map !159"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %OUTPUT_ARR_keep_V), !map !165"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %OUTPUT_ARR_strb_V), !map !169"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %OUTPUT_ARR_user_V), !map !173"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %OUTPUT_ARR_last_V), !map !177"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %OUTPUT_ARR_id_V), !map !181"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %OUTPUT_ARR_dest_V), !map !185"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @montgo_str) nounwind"   --->   Operation 40 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %INPUT_ARR_data_V, i4* %INPUT_ARR_keep_V, i4* %INPUT_ARR_strb_V, i1* %INPUT_ARR_user_V, i1* %INPUT_ARR_last_V, i1* %INPUT_ARR_id_V, i1* %INPUT_ARR_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [10 x i8]* @p_str3, [1 x i8]* @p_str2)" [montg_mul/montg_mul.cpp:12]   --->   Operation 41 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %OUTPUT_ARR_data_V, i4* %OUTPUT_ARR_keep_V, i4* %OUTPUT_ARR_strb_V, i1* %OUTPUT_ARR_user_V, i1* %OUTPUT_ARR_last_V, i1* %OUTPUT_ARR_id_V, i1* %OUTPUT_ARR_dest_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [11 x i8]* @p_str4, [1 x i8]* @p_str2)" [montg_mul/montg_mul.cpp:12]   --->   Operation 42 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [montg_mul/montg_mul.cpp:12]   --->   Operation 43 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (1.76ns)   --->   "br label %1" [montg_mul/montg_mul.cpp:20]   --->   Operation 44 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.87>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%p_Val2_2 = phi i2048 [ undef, %0 ], [ %p_Result_6, %2 ]"   --->   Operation 45 'phi' 'p_Val2_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%p_Val2_s = phi i2048 [ undef, %0 ], [ %p_Result_5, %2 ]"   --->   Operation 46 'phi' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%ii = phi i8 [ 0, %0 ], [ %ii_1, %2 ]"   --->   Operation 47 'phi' 'ii' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (1.55ns)   --->   "%exitcond1 = icmp eq i8 %ii, -128" [montg_mul/montg_mul.cpp:20]   --->   Operation 48 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 128, i64 128, i64 128)"   --->   Operation 49 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (1.91ns)   --->   "%ii_1 = add i8 %ii, 1" [montg_mul/montg_mul.cpp:20]   --->   Operation 50 'add' 'ii_1' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %3, label %2" [montg_mul/montg_mul.cpp:20]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i8 %ii to i7" [montg_mul/montg_mul.cpp:20]   --->   Operation 52 'trunc' 'tmp_2' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%Lo_assign = call i11 @_ssdm_op_BitConcatenate.i11.i7.i4(i7 %tmp_2, i4 0)" [montg_mul/montg_mul.cpp:22]   --->   Operation 53 'bitconcatenate' 'Lo_assign' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%Hi_assign = or i11 %Lo_assign, 15" [montg_mul/montg_mul.cpp:22]   --->   Operation 54 'or' 'Hi_assign' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (1.88ns)   --->   "%tmp_3 = icmp ugt i11 %Lo_assign, %Hi_assign" [montg_mul/montg_mul.cpp:22]   --->   Operation 55 'icmp' 'tmp_3' <Predicate = (!exitcond1)> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_5 = zext i11 %Lo_assign to i12" [montg_mul/montg_mul.cpp:22]   --->   Operation 56 'zext' 'tmp_5' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_7 = zext i11 %Hi_assign to i12" [montg_mul/montg_mul.cpp:22]   --->   Operation 57 'zext' 'tmp_7' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node tmp_12)   --->   "%tmp_9 = select i1 %tmp_3, i12 %tmp_5, i12 %tmp_7" [montg_mul/montg_mul.cpp:22]   --->   Operation 58 'select' 'tmp_9' <Predicate = (!exitcond1)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (0.99ns) (out node of the LUT)   --->   "%tmp_12 = xor i12 %tmp_9, 2047" [montg_mul/montg_mul.cpp:22]   --->   Operation 59 'xor' 'tmp_12' <Predicate = (!exitcond1)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (1.88ns)   --->   "%tmp_26 = icmp ugt i11 %Lo_assign, %Hi_assign" [montg_mul/montg_mul.cpp:23]   --->   Operation 60 'icmp' 'tmp_26' <Predicate = (!exitcond1)> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_27 = zext i11 %Lo_assign to i12" [montg_mul/montg_mul.cpp:23]   --->   Operation 61 'zext' 'tmp_27' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_28 = zext i11 %Hi_assign to i12" [montg_mul/montg_mul.cpp:23]   --->   Operation 62 'zext' 'tmp_28' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns) (grouped into LUT with out node tmp_33)   --->   "%tmp_30 = select i1 %tmp_26, i12 %tmp_27, i12 %tmp_28" [montg_mul/montg_mul.cpp:23]   --->   Operation 63 'select' 'tmp_30' <Predicate = (!exitcond1)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.99ns) (out node of the LUT)   --->   "%tmp_33 = xor i12 %tmp_30, 2047" [montg_mul/montg_mul.cpp:23]   --->   Operation 64 'xor' 'tmp_33' <Predicate = (!exitcond1)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%x0_V = trunc i2048 %p_Val2_s to i1" [montg_mul/montg_mul.cpp:27]   --->   Operation 65 'trunc' 'x0_V' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (1.76ns)   --->   "br label %4" [montg_mul/montg_mul.cpp:33]   --->   Operation 66 'br' <Predicate = (exitcond1)> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 2.73>
+ST_3 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node tmp_11)   --->   "%tmp_8 = xor i12 %tmp_5, 2047" [montg_mul/montg_mul.cpp:22]   --->   Operation 67 'xor' 'tmp_8' <Predicate = (tmp_3)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [1/1] (0.99ns) (out node of the LUT)   --->   "%tmp_11 = select i1 %tmp_3, i12 %tmp_8, i12 %tmp_5" [montg_mul/montg_mul.cpp:22]   --->   Operation 68 'select' 'tmp_11' <Predicate = true> <Delay = 0.99> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_15 = zext i12 %tmp_12 to i2048" [montg_mul/montg_mul.cpp:22]   --->   Operation 69 'zext' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [2/2] (2.73ns)   --->   "%tmp_20 = lshr i2048 -1, %tmp_15" [montg_mul/montg_mul.cpp:22]   --->   Operation 70 'lshr' 'tmp_20' <Predicate = true> <Delay = 2.73> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/1] (0.00ns) (grouped into LUT with out node tmp_32)   --->   "%tmp_29 = xor i12 %tmp_27, 2047" [montg_mul/montg_mul.cpp:23]   --->   Operation 71 'xor' 'tmp_29' <Predicate = (tmp_26)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [1/1] (0.99ns) (out node of the LUT)   --->   "%tmp_32 = select i1 %tmp_26, i12 %tmp_29, i12 %tmp_27" [montg_mul/montg_mul.cpp:23]   --->   Operation 72 'select' 'tmp_32' <Predicate = true> <Delay = 0.99> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_36 = zext i12 %tmp_33 to i2048" [montg_mul/montg_mul.cpp:23]   --->   Operation 73 'zext' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [2/2] (2.73ns)   --->   "%tmp_41 = lshr i2048 -1, %tmp_36" [montg_mul/montg_mul.cpp:23]   --->   Operation 74 'lshr' 'tmp_41' <Predicate = true> <Delay = 2.73> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.08>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%empty_8 = call { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %INPUT_ARR_data_V, i4* %INPUT_ARR_keep_V, i4* %INPUT_ARR_strb_V, i1* %INPUT_ARR_user_V, i1* %INPUT_ARR_last_V, i1* %INPUT_ARR_id_V, i1* %INPUT_ARR_dest_V)"   --->   Operation 75 'read' 'empty_8' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%p_Val2_1 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_8, 0"   --->   Operation 76 'extractvalue' 'p_Val2_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%p_Result_s = call i16 @_ssdm_op_PartSelect.i16.i32.i32.i32(i32 %p_Val2_1, i32 16, i32 31)" [montg_mul/montg_mul.cpp:22]   --->   Operation 77 'partselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_V = zext i16 %p_Result_s to i2048" [montg_mul/montg_mul.cpp:22]   --->   Operation 78 'zext' 'tmp_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_13 = zext i12 %tmp_11 to i2048" [montg_mul/montg_mul.cpp:22]   --->   Operation 79 'zext' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 80 [2/2] (3.08ns)   --->   "%tmp_16 = shl i2048 %tmp_V, %tmp_13" [montg_mul/montg_mul.cpp:22]   --->   Operation 80 'shl' 'tmp_16' <Predicate = true> <Delay = 3.08> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 81 [1/2] (2.73ns)   --->   "%tmp_20 = lshr i2048 -1, %tmp_15" [montg_mul/montg_mul.cpp:22]   --->   Operation 81 'lshr' 'tmp_20' <Predicate = true> <Delay = 2.73> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_25 = trunc i32 %p_Val2_1 to i16" [montg_mul/montg_mul.cpp:23]   --->   Operation 82 'trunc' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%tmp_V_1 = zext i16 %tmp_25 to i2048" [montg_mul/montg_mul.cpp:23]   --->   Operation 83 'zext' 'tmp_V_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_34 = zext i12 %tmp_32 to i2048" [montg_mul/montg_mul.cpp:23]   --->   Operation 84 'zext' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 85 [2/2] (3.08ns)   --->   "%tmp_37 = shl i2048 %tmp_V_1, %tmp_34" [montg_mul/montg_mul.cpp:23]   --->   Operation 85 'shl' 'tmp_37' <Predicate = true> <Delay = 3.08> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/2] (2.73ns)   --->   "%tmp_41 = lshr i2048 -1, %tmp_36" [montg_mul/montg_mul.cpp:23]   --->   Operation 86 'lshr' 'tmp_41' <Predicate = true> <Delay = 2.73> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.46>
+ST_5 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_10 = select i1 %tmp_3, i12 %tmp_7, i12 %tmp_5" [montg_mul/montg_mul.cpp:22]   --->   Operation 87 'select' 'tmp_10' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 88 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_14 = zext i12 %tmp_10 to i2048" [montg_mul/montg_mul.cpp:22]   --->   Operation 88 'zext' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 89 [1/2] (3.08ns)   --->   "%tmp_16 = shl i2048 %tmp_V, %tmp_13" [montg_mul/montg_mul.cpp:22]   --->   Operation 89 'shl' 'tmp_16' <Predicate = true> <Delay = 3.08> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_19 = shl i2048 -1, %tmp_14" [montg_mul/montg_mul.cpp:22]   --->   Operation 90 'shl' 'tmp_19' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.46> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 91 [1/1] (3.46ns) (out node of the LUT)   --->   "%p_demorgan = and i2048 %tmp_19, %tmp_20" [montg_mul/montg_mul.cpp:22]   --->   Operation 91 'and' 'p_demorgan' <Predicate = true> <Delay = 3.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan9)   --->   "%tmp_31 = select i1 %tmp_26, i12 %tmp_28, i12 %tmp_27" [montg_mul/montg_mul.cpp:23]   --->   Operation 92 'select' 'tmp_31' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 93 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan9)   --->   "%tmp_35 = zext i12 %tmp_31 to i2048" [montg_mul/montg_mul.cpp:23]   --->   Operation 93 'zext' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 94 [1/2] (3.08ns)   --->   "%tmp_37 = shl i2048 %tmp_V_1, %tmp_34" [montg_mul/montg_mul.cpp:23]   --->   Operation 94 'shl' 'tmp_37' <Predicate = true> <Delay = 3.08> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan9)   --->   "%tmp_40 = shl i2048 -1, %tmp_35" [montg_mul/montg_mul.cpp:23]   --->   Operation 95 'shl' 'tmp_40' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 3.46> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 96 [1/1] (3.46ns) (out node of the LUT)   --->   "%p_demorgan9 = and i2048 %tmp_40, %tmp_41" [montg_mul/montg_mul.cpp:23]   --->   Operation 96 'and' 'p_demorgan9' <Predicate = true> <Delay = 3.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.40>
+ST_6 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node p_Result_5)   --->   "%tmp_17 = call i2048 @llvm.part.select.i2048(i2048 %tmp_16, i32 2047, i32 0)" [montg_mul/montg_mul.cpp:22]   --->   Operation 97 'partselect' 'tmp_17' <Predicate = (tmp_3)> <Delay = 0.00>
+ST_6 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node p_Result_5)   --->   "%tmp_18 = select i1 %tmp_3, i2048 %tmp_17, i2048 %tmp_16" [montg_mul/montg_mul.cpp:22]   --->   Operation 98 'select' 'tmp_18' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 99 [1/1] (0.00ns) (grouped into LUT with out node p_Result_5)   --->   "%tmp_21 = xor i2048 %p_demorgan, -1" [montg_mul/montg_mul.cpp:22]   --->   Operation 99 'xor' 'tmp_21' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node p_Result_5)   --->   "%tmp_22 = and i2048 %p_Val2_s, %tmp_21" [montg_mul/montg_mul.cpp:22]   --->   Operation 100 'and' 'tmp_22' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node p_Result_5)   --->   "%tmp_23 = and i2048 %tmp_18, %p_demorgan" [montg_mul/montg_mul.cpp:22]   --->   Operation 101 'and' 'tmp_23' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 102 [1/1] (2.40ns) (out node of the LUT)   --->   "%p_Result_5 = or i2048 %tmp_22, %tmp_23" [montg_mul/montg_mul.cpp:22]   --->   Operation 102 'or' 'p_Result_5' <Predicate = true> <Delay = 2.40> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node p_Result_6)   --->   "%tmp_38 = call i2048 @llvm.part.select.i2048(i2048 %tmp_37, i32 2047, i32 0)" [montg_mul/montg_mul.cpp:23]   --->   Operation 103 'partselect' 'tmp_38' <Predicate = (tmp_26)> <Delay = 0.00>
+ST_6 : Operation 104 [1/1] (0.00ns) (grouped into LUT with out node p_Result_6)   --->   "%tmp_39 = select i1 %tmp_26, i2048 %tmp_38, i2048 %tmp_37" [montg_mul/montg_mul.cpp:23]   --->   Operation 104 'select' 'tmp_39' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 105 [1/1] (0.00ns) (grouped into LUT with out node p_Result_6)   --->   "%tmp_42 = xor i2048 %p_demorgan9, -1" [montg_mul/montg_mul.cpp:23]   --->   Operation 105 'xor' 'tmp_42' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 106 [1/1] (0.00ns) (grouped into LUT with out node p_Result_6)   --->   "%tmp_43 = and i2048 %p_Val2_2, %tmp_42" [montg_mul/montg_mul.cpp:23]   --->   Operation 106 'and' 'tmp_43' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node p_Result_6)   --->   "%tmp_44 = and i2048 %tmp_39, %p_demorgan9" [montg_mul/montg_mul.cpp:23]   --->   Operation 107 'and' 'tmp_44' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 108 [1/1] (2.40ns) (out node of the LUT)   --->   "%p_Result_6 = or i2048 %tmp_43, %tmp_44" [montg_mul/montg_mul.cpp:23]   --->   Operation 108 'or' 'p_Result_6' <Predicate = true> <Delay = 2.40> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 109 [1/1] (0.00ns)   --->   "br label %1" [montg_mul/montg_mul.cpp:20]   --->   Operation 109 'br' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 2> <Delay = 2.40>
+ST_7 : Operation 110 [1/1] (0.00ns)   --->   "%p_Val2_3 = phi i2049 [ 0, %3 ], [ %result_mont_V, %5 ]"   --->   Operation 110 'phi' 'p_Val2_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%Hi_assign_1 = phi i12 [ 0, %3 ], [ %i, %5 ]"   --->   Operation 111 'phi' 'Hi_assign_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 112 [1/1] (0.00ns)   --->   "%p_Val2_3_cast = zext i2049 %p_Val2_3 to i2050" [montg_mul/montg_mul.cpp:33]   --->   Operation 112 'zext' 'p_Val2_3_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 113 [1/1] (0.00ns)   --->   "%Hi_assign_1_cast2 = zext i12 %Hi_assign_1 to i32" [montg_mul/montg_mul.cpp:33]   --->   Operation 113 'zext' 'Hi_assign_1_cast2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 114 [1/1] (1.99ns)   --->   "%exitcond2 = icmp eq i12 %Hi_assign_1, -2048" [montg_mul/montg_mul.cpp:33]   --->   Operation 114 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 115 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2048, i64 2048, i64 2048)"   --->   Operation 115 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 116 [1/1] (1.54ns)   --->   "%i = add i12 %Hi_assign_1, 1" [montg_mul/montg_mul.cpp:33]   --->   Operation 116 'add' 'i' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 117 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader.preheader, label %5" [montg_mul/montg_mul.cpp:33]   --->   Operation 117 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_46 = call i1 @_ssdm_op_BitSelect.i1.i2048.i32(i2048 %p_Val2_2, i32 %Hi_assign_1_cast2)" [montg_mul/montg_mul.cpp:35]   --->   Operation 118 'bitselect' 'tmp_46' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_7 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node tmp_cast_cast)   --->   "%tmp_6 = and i1 %tmp_46, %x0_V" [montg_mul/montg_mul.cpp:35]   --->   Operation 119 'and' 'tmp_6' <Predicate = (!exitcond2)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 120 [1/1] (0.00ns) (grouped into LUT with out node tmp_cast_cast)   --->   "%tmp_47 = trunc i2049 %p_Val2_3 to i1" [montg_mul/montg_mul.cpp:35]   --->   Operation 120 'trunc' 'tmp_47' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_7 : Operation 121 [1/1] (0.00ns) (grouped into LUT with out node tmp_cast_cast)   --->   "%u_V = xor i1 %tmp_47, %tmp_6" [montg_mul/montg_mul.cpp:35]   --->   Operation 121 'xor' 'u_V' <Predicate = (!exitcond2)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 122 [1/1] (0.00ns) (grouped into LUT with out node p_2)   --->   "%tmp_48 = select i1 %tmp_46, i2048 -1, i2048 0" [montg_mul/montg_mul.cpp:36]   --->   Operation 122 'select' 'tmp_48' <Predicate = (!exitcond2)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 123 [1/1] (0.99ns) (out node of the LUT)   --->   "%p_2 = and i2048 %p_Val2_s, %tmp_48" [montg_mul/montg_mul.cpp:36]   --->   Operation 123 'and' 'p_2' <Predicate = (!exitcond2)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 124 [1/1] (2.40ns) (out node of the LUT)   --->   "%tmp_cast_cast = select i1 %u_V, i2049 32317006063786617977917430649010583755941783839848263806108334707876161658501792010838438411133120683746863161956397718593719968461398227755212781327504152898888976687143799271809392122955605379887746090408143074248623861557548961558187609093568870140583868421948476203630469576362718772096030204480241287226893235227827730817702608660343871605150215429029970927884587506996528554963503594963862581604425590897617117325646633571708358531971602163791219456254444572418164709485173432211557463438568797167924427896354077734400648009025313026601827028631697382772511222954889625160572730584806113740809819946502720585713, i2049 0" [montg_mul/montg_mul.cpp:36]   --->   Operation 124 'select' 'tmp_cast_cast' <Predicate = (!exitcond2)> <Delay = 2.40> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 125 [1/1] (1.76ns)   --->   "br label %.preheader" [montg_mul/montg_mul.cpp:48]   --->   Operation 125 'br' <Predicate = (exitcond2)> <Delay = 1.76>
+
+State 8 <SV = 3> <Delay = 3.44>
+ST_8 : Operation 126 [1/1] (0.00ns)   --->   "%p_2_cast = zext i2048 %p_2 to i2049" [montg_mul/montg_mul.cpp:36]   --->   Operation 126 'zext' 'p_2_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 127 [2/2] (3.44ns)   --->   "%tmp = add i2049 %tmp_cast_cast, %p_2_cast" [montg_mul/montg_mul.cpp:36]   --->   Operation 127 'add' 'tmp' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 4> <Delay = 3.44>
+ST_9 : Operation 128 [1/2] (3.44ns)   --->   "%tmp = add i2049 %tmp_cast_cast, %p_2_cast" [montg_mul/montg_mul.cpp:36]   --->   Operation 128 'add' 'tmp' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 5> <Delay = 3.44>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_cast = zext i2049 %tmp to i2050" [montg_mul/montg_mul.cpp:36]   --->   Operation 129 'zext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [2/2] (3.44ns)   --->   "%result_mont_V_3 = add i2050 %p_Val2_3_cast, %tmp_cast" [montg_mul/montg_mul.cpp:36]   --->   Operation 130 'add' 'result_mont_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 6> <Delay = 3.44>
+ST_11 : Operation 131 [1/2] (3.44ns)   --->   "%result_mont_V_3 = add i2050 %p_Val2_3_cast, %tmp_cast" [montg_mul/montg_mul.cpp:36]   --->   Operation 131 'add' 'result_mont_V_3' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 132 [1/1] (0.00ns)   --->   "%p_Result_1 = call i2049 @_ssdm_op_PartSelect.i2049.i2050.i32.i32(i2050 %result_mont_V_3, i32 1, i32 2049)" [montg_mul/montg_mul.cpp:37]   --->   Operation 132 'partselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 7> <Delay = 3.44>
+ST_12 : Operation 133 [2/2] (3.44ns)   --->   "%result_mont_V_1 = add i2049 -32317006063786617977917430649010583755941783839848263806108334707876161658501792010838438411133120683746863161956397718593719968461398227755212781327504152898888976687143799271809392122955605379887746090408143074248623861557548961558187609093568870140583868421948476203630469576362718772096030204480241287226893235227827730817702608660343871605150215429029970927884587506996528554963503594963862581604425590897617117325646633571708358531971602163791219456254444572418164709485173432211557463438568797167924427896354077734400648009025313026601827028631697382772511222954889625160572730584806113740809819946502720585713, %p_Result_1" [montg_mul/montg_mul.cpp:40]   --->   Operation 133 'add' 'result_mont_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 8> <Delay = 3.90>
+ST_13 : Operation 134 [1/1] (3.90ns)   --->   "%tmp_4 = icmp ult i2049 %p_Result_1, 32317006063786617977917430649010583755941783839848263806108334707876161658501792010838438411133120683746863161956397718593719968461398227755212781327504152898888976687143799271809392122955605379887746090408143074248623861557548961558187609093568870140583868421948476203630469576362718772096030204480241287226893235227827730817702608660343871605150215429029970927884587506996528554963503594963862581604425590897617117325646633571708358531971602163791219456254444572418164709485173432211557463438568797167924427896354077734400648009025313026601827028631697382772511222954889625160572730584806113740809819946502720585713" [montg_mul/montg_mul.cpp:38]   --->   Operation 134 'icmp' 'tmp_4' <Predicate = true> <Delay = 3.90> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 135 [1/2] (3.44ns)   --->   "%result_mont_V_1 = add i2049 -32317006063786617977917430649010583755941783839848263806108334707876161658501792010838438411133120683746863161956397718593719968461398227755212781327504152898888976687143799271809392122955605379887746090408143074248623861557548961558187609093568870140583868421948476203630469576362718772096030204480241287226893235227827730817702608660343871605150215429029970927884587506996528554963503594963862581604425590897617117325646633571708358531971602163791219456254444572418164709485173432211557463438568797167924427896354077734400648009025313026601827028631697382772511222954889625160572730584806113740809819946502720585713, %p_Result_1" [montg_mul/montg_mul.cpp:40]   --->   Operation 135 'add' 'result_mont_V_1' <Predicate = true> <Delay = 3.44> <Core = "AddSubnS">   --->   Core 15 'AddSubnS' <Latency = 1> <II = 1> <Delay = 3.44> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 9> <Delay = 2.40>
+ST_14 : Operation 136 [1/1] (2.40ns)   --->   "%result_mont_V = select i1 %tmp_4, i2049 %p_Result_1, i2049 %result_mont_V_1" [montg_mul/montg_mul.cpp:38]   --->   Operation 136 'select' 'result_mont_V' <Predicate = true> <Delay = 2.40> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 137 [1/1] (0.00ns)   --->   "br label %4" [montg_mul/montg_mul.cpp:33]   --->   Operation 137 'br' <Predicate = true> <Delay = 0.00>
+
+State 15 <SV = 3> <Delay = 1.88>
+ST_15 : Operation 138 [1/1] (0.00ns)   --->   "%i1 = phi i7 [ %i_1, %6 ], [ 0, %.preheader.preheader ]"   --->   Operation 138 'phi' 'i1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 139 [1/1] (1.48ns)   --->   "%exitcond = icmp eq i7 %i1, -64" [montg_mul/montg_mul.cpp:48]   --->   Operation 139 'icmp' 'exitcond' <Predicate = true> <Delay = 1.48> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 140 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)"   --->   Operation 140 'speclooptripcount' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 141 [1/1] (1.87ns)   --->   "%i_1 = add i7 %i1, 1" [montg_mul/montg_mul.cpp:48]   --->   Operation 141 'add' 'i_1' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 142 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %7, label %6" [montg_mul/montg_mul.cpp:48]   --->   Operation 142 'br' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 143 [1/1] (0.00ns)   --->   "%tmp_49 = trunc i7 %i1 to i6" [montg_mul/montg_mul.cpp:48]   --->   Operation 143 'trunc' 'tmp_49' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_15 : Operation 144 [1/1] (0.00ns)   --->   "%Lo_assign_1 = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %tmp_49, i5 0)" [montg_mul/montg_mul.cpp:52]   --->   Operation 144 'bitconcatenate' 'Lo_assign_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_15 : Operation 145 [1/1] (0.00ns)   --->   "%Hi_assign_2 = or i11 %Lo_assign_1, 31" [montg_mul/montg_mul.cpp:52]   --->   Operation 145 'or' 'Hi_assign_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_15 : Operation 146 [1/1] (1.88ns)   --->   "%tmp_50 = icmp ugt i11 %Lo_assign_1, %Hi_assign_2" [montg_mul/montg_mul.cpp:52]   --->   Operation 146 'icmp' 'tmp_50' <Predicate = (!exitcond)> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 147 [1/1] (0.00ns)   --->   "ret void" [montg_mul/montg_mul.cpp:60]   --->   Operation 147 'ret' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 16 <SV = 4> <Delay = 3.18>
+ST_16 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_51 = zext i11 %Lo_assign_1 to i12" [montg_mul/montg_mul.cpp:52]   --->   Operation 148 'zext' 'tmp_51' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_52 = zext i11 %Hi_assign_2 to i12" [montg_mul/montg_mul.cpp:52]   --->   Operation 149 'zext' 'tmp_52' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_53 = call i2050 @llvm.part.select.i2050(i2050 %p_Val2_3_cast, i32 2049, i32 0)" [montg_mul/montg_mul.cpp:52]   --->   Operation 150 'partselect' 'tmp_53' <Predicate = (tmp_50)> <Delay = 0.00>
+ST_16 : Operation 151 [1/1] (1.63ns)   --->   "%tmp_54 = sub i12 %tmp_51, %tmp_52" [montg_mul/montg_mul.cpp:52]   --->   Operation 151 'sub' 'tmp_54' <Predicate = (tmp_50)> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 152 [1/1] (1.54ns)   --->   "%tmp_55 = sub i12 -2047, %tmp_51" [montg_mul/montg_mul.cpp:52]   --->   Operation 152 'sub' 'tmp_55' <Predicate = (tmp_50)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 153 [1/1] (1.63ns)   --->   "%tmp_56 = sub i12 %tmp_52, %tmp_51" [montg_mul/montg_mul.cpp:52]   --->   Operation 153 'sub' 'tmp_56' <Predicate = (!tmp_50)> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node tmp_60)   --->   "%tmp_57 = select i1 %tmp_50, i12 %tmp_54, i12 %tmp_56" [montg_mul/montg_mul.cpp:52]   --->   Operation 154 'select' 'tmp_57' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 155 [1/1] (2.40ns)   --->   "%tmp_58 = select i1 %tmp_50, i2050 %tmp_53, i2050 %p_Val2_3_cast" [montg_mul/montg_mul.cpp:52]   --->   Operation 155 'select' 'tmp_58' <Predicate = true> <Delay = 2.40> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 156 [1/1] (0.69ns)   --->   "%tmp_59 = select i1 %tmp_50, i12 %tmp_55, i12 %tmp_51" [montg_mul/montg_mul.cpp:52]   --->   Operation 156 'select' 'tmp_59' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_16 : Operation 157 [1/1] (1.54ns) (out node of the LUT)   --->   "%tmp_60 = sub i12 -2047, %tmp_57" [montg_mul/montg_mul.cpp:52]   --->   Operation 157 'sub' 'tmp_60' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 5> <Delay = 3.85>
+ST_17 : Operation 158 [1/1] (0.00ns)   --->   "%tmp_61 = zext i12 %tmp_59 to i2050" [montg_mul/montg_mul.cpp:52]   --->   Operation 158 'zext' 'tmp_61' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 159 [7/7] (3.85ns)   --->   "%tmp_63 = lshr i2050 %tmp_58, %tmp_61" [montg_mul/montg_mul.cpp:52]   --->   Operation 159 'lshr' 'tmp_63' <Predicate = true> <Delay = 3.85> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 6> <Delay = 3.85>
+ST_18 : Operation 160 [6/7] (3.85ns)   --->   "%tmp_63 = lshr i2050 %tmp_58, %tmp_61" [montg_mul/montg_mul.cpp:52]   --->   Operation 160 'lshr' 'tmp_63' <Predicate = true> <Delay = 3.85> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 7> <Delay = 3.85>
+ST_19 : Operation 161 [5/7] (3.85ns)   --->   "%tmp_63 = lshr i2050 %tmp_58, %tmp_61" [montg_mul/montg_mul.cpp:52]   --->   Operation 161 'lshr' 'tmp_63' <Predicate = true> <Delay = 3.85> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 8> <Delay = 3.85>
+ST_20 : Operation 162 [4/7] (3.85ns)   --->   "%tmp_63 = lshr i2050 %tmp_58, %tmp_61" [montg_mul/montg_mul.cpp:52]   --->   Operation 162 'lshr' 'tmp_63' <Predicate = true> <Delay = 3.85> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 9> <Delay = 3.85>
+ST_21 : Operation 163 [3/7] (3.85ns)   --->   "%tmp_63 = lshr i2050 %tmp_58, %tmp_61" [montg_mul/montg_mul.cpp:52]   --->   Operation 163 'lshr' 'tmp_63' <Predicate = true> <Delay = 3.85> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 10> <Delay = 3.85>
+ST_22 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_62 = zext i12 %tmp_60 to i2050" [montg_mul/montg_mul.cpp:52]   --->   Operation 164 'zext' 'tmp_62' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 165 [2/7] (3.85ns)   --->   "%tmp_63 = lshr i2050 %tmp_58, %tmp_61" [montg_mul/montg_mul.cpp:52]   --->   Operation 165 'lshr' 'tmp_63' <Predicate = true> <Delay = 3.85> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 166 [2/2] (2.73ns)   --->   "%tmp_64 = lshr i2050 -1, %tmp_62" [montg_mul/montg_mul.cpp:52]   --->   Operation 166 'lshr' 'tmp_64' <Predicate = true> <Delay = 2.73> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 11> <Delay = 3.85>
+ST_23 : Operation 167 [1/7] (3.85ns)   --->   "%tmp_63 = lshr i2050 %tmp_58, %tmp_61" [montg_mul/montg_mul.cpp:52]   --->   Operation 167 'lshr' 'tmp_63' <Predicate = true> <Delay = 3.85> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 168 [1/2] (2.73ns)   --->   "%tmp_64 = lshr i2050 -1, %tmp_62" [montg_mul/montg_mul.cpp:52]   --->   Operation 168 'lshr' 'tmp_64' <Predicate = true> <Delay = 2.73> <Core = "ShiftnS">   --->   Core 29 'ShiftnS' <Latency = 1> <II = 1> <Delay = 2.73> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 12> <Delay = 0.99>
+ST_24 : Operation 169 [1/1] (0.99ns)   --->   "%p_Result_7 = and i2050 %tmp_63, %tmp_64" [montg_mul/montg_mul.cpp:52]   --->   Operation 169 'and' 'p_Result_7' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_66 = trunc i2050 %p_Result_7 to i32" [montg_mul/montg_mul.cpp:52]   --->   Operation 170 'trunc' 'tmp_66' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 171 [1/1] (0.00ns)   --->   "%empty_11 = call { i32, i4, i4, i1, i1, i1, i1 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %INPUT_ARR_data_V, i4* %INPUT_ARR_keep_V, i4* %INPUT_ARR_strb_V, i1* %INPUT_ARR_user_V, i1* %INPUT_ARR_last_V, i1* %INPUT_ARR_id_V, i1* %INPUT_ARR_dest_V)"   --->   Operation 171 'read' 'empty_11' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_24 : Operation 172 [1/1] (0.00ns)   --->   "%INPUT_ARR_keep_V_val = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_11, 1"   --->   Operation 172 'extractvalue' 'INPUT_ARR_keep_V_val' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 173 [1/1] (0.00ns)   --->   "%INPUT_ARR_strb_V_val = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_11, 2"   --->   Operation 173 'extractvalue' 'INPUT_ARR_strb_V_val' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 174 [1/1] (0.00ns)   --->   "%INPUT_ARR_user_V_val = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_11, 3"   --->   Operation 174 'extractvalue' 'INPUT_ARR_user_V_val' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 175 [1/1] (0.00ns)   --->   "%INPUT_ARR_last_V_val = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_11, 4"   --->   Operation 175 'extractvalue' 'INPUT_ARR_last_V_val' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 176 [1/1] (0.00ns)   --->   "%INPUT_ARR_id_V_val7 = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_11, 5"   --->   Operation 176 'extractvalue' 'INPUT_ARR_id_V_val7' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 177 [1/1] (0.00ns)   --->   "%INPUT_ARR_dest_V_val = extractvalue { i32, i4, i4, i1, i1, i1, i1 } %empty_11, 6"   --->   Operation 177 'extractvalue' 'INPUT_ARR_dest_V_val' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 178 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %OUTPUT_ARR_data_V, i4* %OUTPUT_ARR_keep_V, i4* %OUTPUT_ARR_strb_V, i1* %OUTPUT_ARR_user_V, i1* %OUTPUT_ARR_last_V, i1* %OUTPUT_ARR_id_V, i1* %OUTPUT_ARR_dest_V, i32 %tmp_66, i4 %INPUT_ARR_keep_V_val, i4 %INPUT_ARR_strb_V_val, i1 %INPUT_ARR_user_V_val, i1 %INPUT_ARR_last_V_val, i1 %INPUT_ARR_id_V_val7, i1 %INPUT_ARR_dest_V_val)" [montg_mul/montg_mul.cpp:52]   --->   Operation 178 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 25 <SV = 13> <Delay = 0.00>
+ST_25 : Operation 179 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i1P.i1P.i1P.i1P(i32* %OUTPUT_ARR_data_V, i4* %OUTPUT_ARR_keep_V, i4* %OUTPUT_ARR_strb_V, i1* %OUTPUT_ARR_user_V, i1* %OUTPUT_ARR_last_V, i1* %OUTPUT_ARR_id_V, i1* %OUTPUT_ARR_dest_V, i32 %tmp_66, i4 %INPUT_ARR_keep_V_val, i4 %INPUT_ARR_strb_V_val, i1 %INPUT_ARR_user_V_val, i1 %INPUT_ARR_last_V_val, i1 %INPUT_ARR_id_V_val7, i1 %INPUT_ARR_dest_V_val)" [montg_mul/montg_mul.cpp:52]   --->   Operation 179 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_25 : Operation 180 [1/1] (0.00ns)   --->   "br label %.preheader" [montg_mul/montg_mul.cpp:48]   --->   Operation 180 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('__Result__') with incoming values : ('__Result__', montg_mul/montg_mul.cpp:23) [35]  (1.77 ns)
+
+ <State 2>: 2.87ns
+The critical path consists of the following:
+	'phi' operation ('ii') with incoming values : ('ii', montg_mul/montg_mul.cpp:20) [37]  (0 ns)
+	'icmp' operation ('tmp_3', montg_mul/montg_mul.cpp:22) [50]  (1.88 ns)
+	'select' operation ('tmp_9', montg_mul/montg_mul.cpp:22) [54]  (0 ns)
+	'xor' operation ('tmp_12', montg_mul/montg_mul.cpp:22) [57]  (0.99 ns)
+
+ <State 3>: 2.73ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_20', montg_mul/montg_mul.cpp:22) [65]  (2.73 ns)
+
+ <State 4>: 3.09ns
+The critical path consists of the following:
+	axis read on port 'INPUT_ARR_data_V' [46]  (0 ns)
+	'shl' operation ('tmp_16', montg_mul/montg_mul.cpp:22) [61]  (3.09 ns)
+
+ <State 5>: 3.46ns
+The critical path consists of the following:
+	'select' operation ('tmp_10', montg_mul/montg_mul.cpp:22) [55]  (0 ns)
+	'shl' operation ('tmp_19', montg_mul/montg_mul.cpp:22) [64]  (0 ns)
+	'and' operation ('p_demorgan', montg_mul/montg_mul.cpp:22) [66]  (3.46 ns)
+
+ <State 6>: 2.4ns
+The critical path consists of the following:
+	'select' operation ('tmp_18', montg_mul/montg_mul.cpp:22) [63]  (0 ns)
+	'and' operation ('tmp_23', montg_mul/montg_mul.cpp:22) [69]  (0 ns)
+	'or' operation ('__Result__', montg_mul/montg_mul.cpp:22) [70]  (2.4 ns)
+
+ <State 7>: 2.4ns
+The critical path consists of the following:
+	'phi' operation ('result_mont.V') with incoming values : ('result_mont.V', montg_mul/montg_mul.cpp:38) [99]  (0 ns)
+	'xor' operation ('u.V', montg_mul/montg_mul.cpp:35) [111]  (0 ns)
+	'select' operation ('tmp_cast_cast', montg_mul/montg_mul.cpp:36) [115]  (2.4 ns)
+
+ <State 8>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('tmp', montg_mul/montg_mul.cpp:36) [116]  (3.44 ns)
+
+ <State 9>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('tmp', montg_mul/montg_mul.cpp:36) [116]  (3.44 ns)
+
+ <State 10>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('result_mont.V', montg_mul/montg_mul.cpp:36) [118]  (3.44 ns)
+
+ <State 11>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('result_mont.V', montg_mul/montg_mul.cpp:36) [118]  (3.44 ns)
+
+ <State 12>: 3.44ns
+The critical path consists of the following:
+	'add' operation ('result_mont_V_1', montg_mul/montg_mul.cpp:40) [121]  (3.44 ns)
+
+ <State 13>: 3.9ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_4', montg_mul/montg_mul.cpp:38) [120]  (3.9 ns)
+
+ <State 14>: 2.4ns
+The critical path consists of the following:
+	'select' operation ('result_mont.V', montg_mul/montg_mul.cpp:38) [122]  (2.4 ns)
+
+ <State 15>: 1.88ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', montg_mul/montg_mul.cpp:48) [127]  (0 ns)
+	'icmp' operation ('tmp_50', montg_mul/montg_mul.cpp:52) [136]  (1.88 ns)
+
+ <State 16>: 3.19ns
+The critical path consists of the following:
+	'sub' operation ('tmp_54', montg_mul/montg_mul.cpp:52) [140]  (1.64 ns)
+	'select' operation ('tmp_57', montg_mul/montg_mul.cpp:52) [143]  (0 ns)
+	'sub' operation ('tmp_60', montg_mul/montg_mul.cpp:52) [146]  (1.55 ns)
+
+ <State 17>: 3.85ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_63', montg_mul/montg_mul.cpp:52) [149]  (3.85 ns)
+
+ <State 18>: 3.85ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_63', montg_mul/montg_mul.cpp:52) [149]  (3.85 ns)
+
+ <State 19>: 3.85ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_63', montg_mul/montg_mul.cpp:52) [149]  (3.85 ns)
+
+ <State 20>: 3.85ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_63', montg_mul/montg_mul.cpp:52) [149]  (3.85 ns)
+
+ <State 21>: 3.85ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_63', montg_mul/montg_mul.cpp:52) [149]  (3.85 ns)
+
+ <State 22>: 3.85ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_63', montg_mul/montg_mul.cpp:52) [149]  (3.85 ns)
+
+ <State 23>: 3.85ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_63', montg_mul/montg_mul.cpp:52) [149]  (3.85 ns)
+
+ <State 24>: 0.993ns
+The critical path consists of the following:
+	'and' operation ('__Result__', montg_mul/montg_mul.cpp:52) [151]  (0.993 ns)
+
+ <State 25>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

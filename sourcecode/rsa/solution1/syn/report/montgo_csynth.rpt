@@ -1,0 +1,272 @@
+
+
+================================================================
+== Vivado HLS Report for 'montgo'
+================================================================
+* Date:           Fri Jul 31 15:52:13 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        montg_mul
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|     3.903|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  17667|  17667|  17667|  17667|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    640|    640|         5|          -|          -|   128|    no    |
+        |- Loop 2  |  16384|  16384|         8|          -|          -|  2048|    no    |
+        |- Loop 3  |    640|    640|        10|          -|          -|    64|    no    |
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|  39680|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        0|      -|    6370|   5275|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    171|
+|Register         |        -|      -|   36057|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|   42427|  45126|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|      39|     84|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+-----------------------+---------+-------+------+------+
+    |         Instance        |         Module        | BRAM_18K| DSP48E|  FF  |  LUT |
+    +-------------------------+-----------------------+---------+-------+------+------+
+    |montgo_AXILiteS_s_axi_U  |montgo_AXILiteS_s_axi  |        0|      0|    36|    40|
+    |montgo_add_2049nsdEe_U5  |montgo_add_2049nsdEe   |        0|      0|   580|   132|
+    |montgo_add_2049s_fYi_U7  |montgo_add_2049s_fYi   |        0|      0|   580|   132|
+    |montgo_add_2050nseOg_U6  |montgo_add_2050nseOg   |        0|      0|   580|   132|
+    |montgo_lshr_2048sbkb_U1  |montgo_lshr_2048sbkb   |        0|      0|    60|    37|
+    |montgo_lshr_2048sbkb_U2  |montgo_lshr_2048sbkb   |        0|      0|    60|    37|
+    |montgo_lshr_2050ng8j_U8  |montgo_lshr_2050ng8j   |        0|      0|  4262|  4630|
+    |montgo_lshr_2050shbi_U9  |montgo_lshr_2050shbi   |        0|      0|    60|    37|
+    |montgo_shl_2048nscud_U3  |montgo_shl_2048nscud   |        0|      0|    76|    49|
+    |montgo_shl_2048nscud_U4  |montgo_shl_2048nscud   |        0|      0|    76|    49|
+    +-------------------------+-----------------------+---------+-------+------+------+
+    |Total                    |                       |        0|      0|  6370|  5275|
+    +-------------------------+-----------------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+-------+---+------+------------+------------+
+    |      Variable Name      | Operation| DSP48E| FF|  LUT | Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+-------+---+------+------------+------------+
+    |i_1_fu_639_p2            |     +    |      0|  0|    15|           7|           1|
+    |i_fu_541_p2              |     +    |      0|  0|    12|          12|           1|
+    |ii_1_fu_245_p2           |     +    |      0|  0|    15|           8|           1|
+    |tmp_54_fu_684_p2         |     -    |      0|  0|    12|          12|          12|
+    |tmp_55_fu_690_p2         |     -    |      0|  0|    12|          12|          12|
+    |tmp_56_fu_696_p2         |     -    |      0|  0|    12|          12|          12|
+    |tmp_60_fu_722_p2         |     -    |      0|  0|    12|          12|          12|
+    |p_2_fu_578_p2            |    and   |      0|  0|  2048|        2048|        2048|
+    |p_Result_7_fu_745_p2     |    and   |      0|  0|  2050|        2050|        2050|
+    |p_demorgan9_fu_448_p2    |    and   |      0|  0|  2048|        2048|        2048|
+    |p_demorgan_fu_428_p2     |    and   |      0|  0|  2048|        2048|        2048|
+    |tmp_22_fu_473_p2         |    and   |      0|  0|  2048|        2048|        2048|
+    |tmp_23_fu_479_p2         |    and   |      0|  0|  2048|        2048|        2048|
+    |tmp_43_fu_510_p2         |    and   |      0|  0|  2048|        2048|        2048|
+    |tmp_44_fu_516_p2         |    and   |      0|  0|  2048|        2048|        2048|
+    |tmp_6_fu_555_p2          |    and   |      0|  0|     2|           1|           1|
+    |exitcond1_fu_239_p2      |   icmp   |      0|  0|    13|           8|           9|
+    |exitcond2_fu_535_p2      |   icmp   |      0|  0|    13|          12|          13|
+    |exitcond_fu_633_p2       |   icmp   |      0|  0|    11|           7|           8|
+    |tmp_26_fu_297_p2         |   icmp   |      0|  0|    13|          11|          11|
+    |tmp_3_fu_269_p2          |   icmp   |      0|  0|    13|          11|          11|
+    |tmp_4_fu_623_p2          |   icmp   |      0|  0|   179|        2049|        2048|
+    |tmp_50_fu_663_p2         |   icmp   |      0|  0|    13|          11|          11|
+    |Hi_assign_2_fu_657_p2    |    or    |      0|  0|    11|           5|          11|
+    |Hi_assign_fu_263_p2      |    or    |      0|  0|    11|           4|          11|
+    |p_Result_5_fu_484_p2     |    or    |      0|  0|  2048|        2048|        2048|
+    |p_Result_6_fu_521_p2     |    or    |      0|  0|  2048|        2048|        2048|
+    |result_mont_V_fu_628_p3  |  select  |      0|  0|  2049|           1|        2049|
+    |tmp_10_fu_413_p3         |  select  |      0|  0|    12|           1|          12|
+    |tmp_11_fu_334_p3         |  select  |      0|  0|    12|           1|          12|
+    |tmp_18_fu_462_p3         |  select  |      0|  0|  2048|           1|        2048|
+    |tmp_30_fu_311_p3         |  select  |      0|  0|    12|           1|          12|
+    |tmp_31_fu_433_p3         |  select  |      0|  0|    12|           1|          12|
+    |tmp_32_fu_354_p3         |  select  |      0|  0|    12|           1|          12|
+    |tmp_39_fu_499_p3         |  select  |      0|  0|  2048|           1|        2048|
+    |tmp_48_fu_570_p3         |  select  |      0|  0|     2|           1|           2|
+    |tmp_57_fu_702_p3         |  select  |      0|  0|    12|           1|          12|
+    |tmp_58_fu_709_p3         |  select  |      0|  0|  2050|           1|        2050|
+    |tmp_59_fu_715_p3         |  select  |      0|  0|    12|           1|          12|
+    |tmp_9_fu_283_p3          |  select  |      0|  0|    12|           1|          12|
+    |tmp_cast_cast_fu_584_p3  |  select  |      0|  0|  2048|           1|        2048|
+    |tmp_19_fu_422_p2         |    shl   |      0|  0|  2171|           2|        2048|
+    |tmp_40_fu_442_p2         |    shl   |      0|  0|  2171|           2|        2048|
+    |tmp_12_fu_291_p2         |    xor   |      0|  0|    12|          12|          11|
+    |tmp_21_fu_468_p2         |    xor   |      0|  0|  2048|        2048|           2|
+    |tmp_29_fu_349_p2         |    xor   |      0|  0|    12|          12|          11|
+    |tmp_33_fu_319_p2         |    xor   |      0|  0|    12|          12|          11|
+    |tmp_42_fu_505_p2         |    xor   |      0|  0|  2048|        2048|           2|
+    |tmp_8_fu_329_p2          |    xor   |      0|  0|    12|          12|          11|
+    |u_V_fu_564_p2            |    xor   |      0|  0|     2|           1|           1|
+    +-------------------------+----------+-------+---+------+------------+------------+
+    |Total                    |          |      0|  0| 39680|       26839|       37153|
+    +-------------------------+----------+-------+---+------+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+-----+-----------+------+-----------+
+    |          Name          | LUT | Input Size| Bits | Total Bits|
+    +------------------------+-----+-----------+------+-----------+
+    |Hi_assign_1_reg_217     |    9|          2|    12|         24|
+    |INPUT_ARR_TDATA_blk_n   |    9|          2|     1|          2|
+    |OUTPUT_ARR_TDATA_blk_n  |    9|          2|     1|          2|
+    |ap_NS_fsm               |  117|         25|     1|         25|
+    |i1_reg_228              |    9|          2|     7|         14|
+    |ii_reg_195              |    9|          2|     8|         16|
+    |p_Val2_3_reg_206        |    9|          2|  2049|       4098|
+    +------------------------+-----+-----------+------+-----------+
+    |Total                   |  171|         37|  2079|       4181|
+    +------------------------+-----+-----------+------+-----------+
+
+    * Register: 
+    +-------------------------+------+----+------+-----------+
+    |           Name          |  FF  | LUT| Bits | Const Bits|
+    +-------------------------+------+----+------+-----------+
+    |Hi_assign_1_reg_217      |    12|   0|    12|          0|
+    |Hi_assign_2_reg_1004     |     6|   0|    11|          5|
+    |Lo_assign_1_reg_999      |     6|   0|    11|          5|
+    |ap_CS_fsm                |    24|   0|    24|          0|
+    |i1_reg_228               |     7|   0|     7|          0|
+    |i_1_reg_994              |     7|   0|     7|          0|
+    |i_reg_939                |    12|   0|    12|          0|
+    |ii_1_reg_787             |     8|   0|     8|          0|
+    |ii_reg_195               |     8|   0|     8|          0|
+    |p_2_reg_944              |  2048|   0|  2048|          0|
+    |p_Result_1_reg_969       |  2049|   0|  2049|          0|
+    |p_Val2_2_reg_171         |  2048|   0|  2048|          0|
+    |p_Val2_3_cast_reg_929    |  2049|   0|  2050|          1|
+    |p_Val2_3_reg_206         |  2049|   0|  2049|          0|
+    |p_Val2_s_reg_183         |  2048|   0|  2048|          0|
+    |p_demorgan9_reg_913      |  2048|   0|  2048|          0|
+    |p_demorgan_reg_901       |  2048|   0|  2048|          0|
+    |result_mont_V_1_reg_981  |  2049|   0|  2049|          0|
+    |tmp_11_reg_845           |    12|   0|    12|          0|
+    |tmp_12_reg_811           |    12|   0|    12|          0|
+    |tmp_16_reg_895           |  2048|   0|  2048|          0|
+    |tmp_20_reg_875           |  2048|   0|  2048|          0|
+    |tmp_26_reg_816           |     1|   0|     1|          0|
+    |tmp_27_reg_823           |     7|   0|    12|          5|
+    |tmp_28_reg_830           |     7|   0|    12|          5|
+    |tmp_32_reg_855           |    12|   0|    12|          0|
+    |tmp_33_reg_835           |    12|   0|    12|          0|
+    |tmp_37_reg_907           |  2048|   0|  2048|          0|
+    |tmp_3_reg_792            |     1|   0|     1|          0|
+    |tmp_41_reg_890           |  2048|   0|  2048|          0|
+    |tmp_4_reg_976            |     1|   0|     1|          0|
+    |tmp_50_reg_1009          |     1|   0|     1|          0|
+    |tmp_58_reg_1016          |  2050|   0|  2050|          0|
+    |tmp_59_reg_1021          |     8|   0|    12|          4|
+    |tmp_5_reg_799            |     7|   0|    12|          5|
+    |tmp_60_reg_1026          |    11|   0|    12|          1|
+    |tmp_63_reg_1041          |  2050|   0|  2050|          0|
+    |tmp_64_reg_1046          |  2050|   0|  2050|          0|
+    |tmp_7_reg_806            |     7|   0|    12|          5|
+    |tmp_cast_cast_reg_949    |  1040|   0|  2049|       1009|
+    |tmp_reg_959              |  2049|   0|  2049|          0|
+    |x0_V_reg_840             |     1|   0|     1|          0|
+    +-------------------------+------+----+------+-----------+
+    |Total                    | 36057|   0| 37102|       1045|
+    +-------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++------------------------+-----+-----+------------+-------------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_AWADDR   |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARADDR   |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |      AXILiteS     |  return void |
+|ap_clk                  |  in |    1| ap_ctrl_hs |       montgo      | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs |       montgo      | return value |
+|interrupt               | out |    1| ap_ctrl_hs |       montgo      | return value |
+|INPUT_ARR_TDATA         |  in |   32|    axis    |  INPUT_ARR_data_V |    pointer   |
+|INPUT_ARR_TVALID        |  in |    1|    axis    |  INPUT_ARR_data_V |    pointer   |
+|INPUT_ARR_TREADY        | out |    1|    axis    |  INPUT_ARR_dest_V |    pointer   |
+|INPUT_ARR_TDEST         |  in |    1|    axis    |  INPUT_ARR_dest_V |    pointer   |
+|INPUT_ARR_TKEEP         |  in |    4|    axis    |  INPUT_ARR_keep_V |    pointer   |
+|INPUT_ARR_TSTRB         |  in |    4|    axis    |  INPUT_ARR_strb_V |    pointer   |
+|INPUT_ARR_TUSER         |  in |    1|    axis    |  INPUT_ARR_user_V |    pointer   |
+|INPUT_ARR_TLAST         |  in |    1|    axis    |  INPUT_ARR_last_V |    pointer   |
+|INPUT_ARR_TID           |  in |    1|    axis    |   INPUT_ARR_id_V  |    pointer   |
+|OUTPUT_ARR_TDATA        | out |   32|    axis    | OUTPUT_ARR_data_V |    pointer   |
+|OUTPUT_ARR_TREADY       |  in |    1|    axis    | OUTPUT_ARR_data_V |    pointer   |
+|OUTPUT_ARR_TVALID       | out |    1|    axis    | OUTPUT_ARR_dest_V |    pointer   |
+|OUTPUT_ARR_TDEST        | out |    1|    axis    | OUTPUT_ARR_dest_V |    pointer   |
+|OUTPUT_ARR_TKEEP        | out |    4|    axis    | OUTPUT_ARR_keep_V |    pointer   |
+|OUTPUT_ARR_TSTRB        | out |    4|    axis    | OUTPUT_ARR_strb_V |    pointer   |
+|OUTPUT_ARR_TUSER        | out |    1|    axis    | OUTPUT_ARR_user_V |    pointer   |
+|OUTPUT_ARR_TLAST        | out |    1|    axis    | OUTPUT_ARR_last_V |    pointer   |
+|OUTPUT_ARR_TID          | out |    1|    axis    |  OUTPUT_ARR_id_V  |    pointer   |
++------------------------+-----+-----+------------+-------------------+--------------+
+

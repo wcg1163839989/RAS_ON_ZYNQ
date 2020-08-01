@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="montgo" xd:componentRef="montgo" xd:initiationInterval="17732" xd:clockPeriod="4.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="INPUT_ARR[].data" xd:originalName="INPUT_ARR" xd:direction="in" xd:interfaceRef="INPUT_ARR" xd:busTypeRef="axis" xd:arraySize="128" xd:dataWidth="32"/>
+  <xd:arg xd:name="INPUT_ARR[].keep" xd:originalName="INPUT_ARR" xd:direction="in" xd:interfaceRef="INPUT_ARR" xd:busTypeRef="axis" xd:arraySize="128" xd:dataWidth="4"/>
+  <xd:arg xd:name="INPUT_ARR[].strb" xd:originalName="INPUT_ARR" xd:direction="in" xd:interfaceRef="INPUT_ARR" xd:busTypeRef="axis" xd:arraySize="128" xd:dataWidth="4"/>
+  <xd:arg xd:name="INPUT_ARR[].user" xd:originalName="INPUT_ARR" xd:direction="in" xd:interfaceRef="INPUT_ARR" xd:busTypeRef="axis" xd:arraySize="128" xd:dataWidth="1"/>
+  <xd:arg xd:name="INPUT_ARR[].last" xd:originalName="INPUT_ARR" xd:direction="in" xd:interfaceRef="INPUT_ARR" xd:busTypeRef="axis" xd:arraySize="128" xd:dataWidth="1"/>
+  <xd:arg xd:name="INPUT_ARR[].id" xd:originalName="INPUT_ARR" xd:direction="in" xd:interfaceRef="INPUT_ARR" xd:busTypeRef="axis" xd:arraySize="128" xd:dataWidth="1"/>
+  <xd:arg xd:name="INPUT_ARR[].dest" xd:originalName="INPUT_ARR" xd:direction="in" xd:interfaceRef="INPUT_ARR" xd:busTypeRef="axis" xd:arraySize="128" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUTPUT_ARR[].data" xd:originalName="OUTPUT_ARR" xd:direction="out" xd:interfaceRef="OUTPUT_ARR" xd:busTypeRef="axis" xd:arraySize="64" xd:dataWidth="32"/>
+  <xd:arg xd:name="OUTPUT_ARR[].keep" xd:originalName="OUTPUT_ARR" xd:direction="out" xd:interfaceRef="OUTPUT_ARR" xd:busTypeRef="axis" xd:arraySize="64" xd:dataWidth="4"/>
+  <xd:arg xd:name="OUTPUT_ARR[].strb" xd:originalName="OUTPUT_ARR" xd:direction="out" xd:interfaceRef="OUTPUT_ARR" xd:busTypeRef="axis" xd:arraySize="64" xd:dataWidth="4"/>
+  <xd:arg xd:name="OUTPUT_ARR[].user" xd:originalName="OUTPUT_ARR" xd:direction="out" xd:interfaceRef="OUTPUT_ARR" xd:busTypeRef="axis" xd:arraySize="64" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUTPUT_ARR[].last" xd:originalName="OUTPUT_ARR" xd:direction="out" xd:interfaceRef="OUTPUT_ARR" xd:busTypeRef="axis" xd:arraySize="64" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUTPUT_ARR[].id" xd:originalName="OUTPUT_ARR" xd:direction="out" xd:interfaceRef="OUTPUT_ARR" xd:busTypeRef="axis" xd:arraySize="64" xd:dataWidth="1"/>
+  <xd:arg xd:name="OUTPUT_ARR[].dest" xd:originalName="OUTPUT_ARR" xd:direction="out" xd:interfaceRef="OUTPUT_ARR" xd:busTypeRef="axis" xd:arraySize="64" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="17731" xd:worst-case="17731" xd:average-case="17731"/>
+  <xd:resourceEstimates xd:LUT="45636" xd:FF="42660" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

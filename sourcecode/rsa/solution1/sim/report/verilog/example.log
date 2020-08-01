@@ -1,0 +1,148 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx2018/Vivado/2018.3/msys64/mingw64/bin/g++"
+   Compiling montg_mul_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_example.cpp
+   Compiling montg_mul.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Success: HW and SW results match
+
+E:\vivadoHLS_project\montg_mul\solution1\sim\verilog>set PATH= 
+
+E:\vivadoHLS_project\montg_mul\solution1\sim\verilog>call D:/Xilinx2018/Vivado/2018.3/bin/xelab xil_defaultlib.apatb_example_top glbl -prj example.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s example -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx2018/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_example_top glbl -prj example.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s example -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/AESL_autobram_A_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_A_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/AESL_autobram_B_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autobram_B_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/example.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_example_top
+INFO: [VRFC 10-2458] undeclared symbol bramA_V_Rst_A, assumed default net type wire [E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/example.autotb.v:164]
+INFO: [VRFC 10-2458] undeclared symbol bramA_V_Rst_B, assumed default net type wire [E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/example.autotb.v:171]
+INFO: [VRFC 10-2458] undeclared symbol bramB_V_Rst_A, assumed default net type wire [E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/example.autotb.v:209]
+INFO: [VRFC 10-2458] undeclared symbol bramB_V_Rst_B, assumed default net type wire [E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/example.autotb.v:216]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/example.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/example_add_2048sbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module example_add_2048sbkb_AddSubnS_0
+INFO: [VRFC 10-311] analyzing module example_add_2048sbkb_AddSubnS_0_comb_adder
+INFO: [VRFC 10-311] analyzing module example_add_2048sbkb
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.example_add_2048sbkb_AddSubnS_0_...
+Compiling module xil_defaultlib.example_add_2048sbkb_AddSubnS_0
+Compiling module xil_defaultlib.example_add_2048sbkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.example
+Compiling module xil_defaultlib.AESL_autobram_A_V
+Compiling module xil_defaultlib.AESL_autobram_B_V
+Compiling module xil_defaultlib.apatb_example_top
+Compiling module work.glbl
+Built simulation snapshot example
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/xsim.dir/example/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Jul 28 14:28:59 2020...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/example/xsim_script.tcl
+# xsim {example} -autoloadwcfg -tclbatch {example.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source example.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set B_group [add_wave_group B(bram) -into $coutputgroup]
+## add_wave /apatb_example_top/AESL_inst_example/B_V_Rst_A -into $B_group -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/B_V_Clk_A -into $B_group -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/B_V_Dout_A -into $B_group -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/B_V_Din_A -into $B_group -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/B_V_WEN_A -into $B_group -color #ffff00 -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/B_V_EN_A -into $B_group -color #ffff00 -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/B_V_Addr_A -into $B_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set A_group [add_wave_group A(bram) -into $cinputgroup]
+## add_wave /apatb_example_top/AESL_inst_example/A_V_Rst_A -into $A_group -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/A_V_Clk_A -into $A_group -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/A_V_Dout_A -into $A_group -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/A_V_Din_A -into $A_group -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/A_V_WEN_A -into $A_group -color #ffff00 -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/A_V_EN_A -into $A_group -color #ffff00 -radix hex
+## add_wave /apatb_example_top/AESL_inst_example/A_V_Addr_A -into $A_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_example_top/AESL_inst_example/ap_start -into $blocksiggroup
+## add_wave /apatb_example_top/AESL_inst_example/ap_done -into $blocksiggroup
+## add_wave /apatb_example_top/AESL_inst_example/ap_idle -into $blocksiggroup
+## add_wave /apatb_example_top/AESL_inst_example/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_example_top/AESL_inst_example/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_example_top/AESL_inst_example/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_example_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_example_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_example_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_example_top/LENGTH_A_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_example_top/LENGTH_B_V -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_B_group [add_wave_group B(bram) -into $tbcoutputgroup]
+## add_wave /apatb_example_top/B_V_RST_A -into $tb_B_group -radix hex
+## add_wave /apatb_example_top/B_V_CLK_A -into $tb_B_group -radix hex
+## add_wave /apatb_example_top/B_V_DOUT_A -into $tb_B_group -radix hex
+## add_wave /apatb_example_top/B_V_DIN_A -into $tb_B_group -radix hex
+## add_wave /apatb_example_top/B_V_WEN_A -into $tb_B_group -color #ffff00 -radix hex
+## add_wave /apatb_example_top/B_V_EN_A -into $tb_B_group -color #ffff00 -radix hex
+## add_wave /apatb_example_top/B_V_ADDR_A -into $tb_B_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_A_group [add_wave_group A(bram) -into $tbcinputgroup]
+## add_wave /apatb_example_top/A_V_RST_A -into $tb_A_group -radix hex
+## add_wave /apatb_example_top/A_V_CLK_A -into $tb_A_group -radix hex
+## add_wave /apatb_example_top/A_V_DOUT_A -into $tb_A_group -radix hex
+## add_wave /apatb_example_top/A_V_DIN_A -into $tb_A_group -radix hex
+## add_wave /apatb_example_top/A_V_WEN_A -into $tb_A_group -color #ffff00 -radix hex
+## add_wave /apatb_example_top/A_V_EN_A -into $tb_A_group -color #ffff00 -radix hex
+## add_wave /apatb_example_top/A_V_ADDR_A -into $tb_A_group -radix hex
+## save_wave_config example.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "165000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 205 ns : File "E:/vivadoHLS_project/montg_mul/solution1/sim/verilog/example.autotb.v" Line 292
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Jul 28 14:29:03 2020...
+Success: HW and SW results match
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

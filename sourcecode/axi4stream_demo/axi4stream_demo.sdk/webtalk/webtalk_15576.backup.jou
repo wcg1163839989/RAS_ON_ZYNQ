@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Thu Jul 30 15:26:10 2020
+# Process ID: 15576
+# Current directory: E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/webtalk/webtalk.log
+# Journal file: E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

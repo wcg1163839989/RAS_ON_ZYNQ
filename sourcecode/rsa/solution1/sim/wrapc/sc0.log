@@ -1,0 +1,5 @@
+   Build using "D:/Xilinx2018/Vivado/2018.3/msys64/mingw64/bin/g++"
+   Compiling montg_mul_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_example.cpp
+   Compiling montg_mul.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

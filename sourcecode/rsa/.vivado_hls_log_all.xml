@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'montgo' consists of the following:&#xD;&#xA;&#x9;'icmp' operation ('tmp_4', montg_mul/montg_mul.cpp:38) [120]  (3.9 ns)" projectName="montg_mul" solutionName="solution2" date="2020-07-31T15:56:23.458+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (3.903ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns)." projectName="montg_mul" solutionName="solution2" date="2020-07-31T15:56:23.450+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'INPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10)." projectName="montg_mul" solutionName="solution2" date="2020-07-31T15:56:23.144+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'OUTPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10)." projectName="montg_mul" solutionName="solution2" date="2020-07-31T15:56:22.896+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] montg_mul/montg_mul.cpp:22: variable-indexed range selection may cause suboptimal QoR." projectName="montg_mul" solutionName="solution2" date="2020-07-31T15:56:22.812+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'montgo' consists of the following:&#xD;&#xA;&#x9;'icmp' operation ('tmp_4', montg_mul/montg_mul.cpp:42) [120]  (3.9 ns)" projectName="montg_mul" solutionName="solution1" date="2020-07-31T15:52:11.825+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (3.903ns) exceeds the target (target clock period: 4ns, clock uncertainty: 0.5ns, effective delay budget: 3.5ns)." projectName="montg_mul" solutionName="solution1" date="2020-07-31T15:52:11.808+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'INPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10)." projectName="montg_mul" solutionName="solution1" date="2020-07-31T15:52:11.506+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'OUTPUT_ARR.data.V' (montg_mul/montg_mul.cpp:10)." projectName="montg_mul" solutionName="solution1" date="2020-07-31T15:52:11.236+0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] montg_mul/montg_mul.cpp:26: variable-indexed range selection may cause suboptimal QoR." projectName="montg_mul" solutionName="solution1" date="2020-07-31T15:52:11.145+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

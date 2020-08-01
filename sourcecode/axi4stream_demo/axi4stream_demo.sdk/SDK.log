@@ -1,0 +1,1316 @@
+14:32:23 INFO  : Registering command handlers for SDK TCF services
+14:32:24 INFO  : Launching XSCT server: xsct.bat -interactive E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\temp_xsdb_launch_script.tcl
+14:32:26 INFO  : XSCT server has started successfully.
+14:32:26 INFO  : Successfully done setting XSCT server connection channel  
+14:32:29 INFO  : Processing command line option -hwspec E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper.hdf.
+14:32:29 INFO  : Successfully done setting SDK workspace  
+14:34:28 INFO  : Example project standalone_bsp_0_xaxidma_example_simple_poll_1 has been created successfully.
+23:19:08 INFO  : Registering command handlers for SDK TCF services
+23:19:08 INFO  : Launching XSCT server: xsct.bat -interactive E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\temp_xsdb_launch_script.tcl
+23:19:10 INFO  : XSCT server has started successfully.
+23:19:10 INFO  : Successfully done setting XSCT server connection channel  
+23:19:13 INFO  : Processing command line option -hwspec E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper.hdf.
+23:19:13 INFO  : Successfully done setting SDK workspace  
+23:19:13 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+10:00:42 INFO  : Launching XSCT server: xsct.bat -interactive E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\temp_xsdb_launch_script.tcl
+10:00:44 INFO  : XSCT server has started successfully.
+10:00:47 INFO  : Successfully done setting XSCT server connection channel  
+10:00:47 INFO  : Successfully done setting SDK workspace  
+10:00:53 INFO  : Registering command handlers for SDK TCF services
+10:00:53 INFO  : Processing command line option -hwspec E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper.hdf.
+10:00:53 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+10:03:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:03:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:04:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:04:19 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:04:19 INFO  : 'jtag frequency' command is executed.
+10:04:19 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:04:19 INFO  : Context for 'APU' is selected.
+10:04:19 INFO  : System reset is completed.
+10:04:22 INFO  : 'after 3000' command is executed.
+10:04:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:04:25 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:04:25 INFO  : Context for 'APU' is selected.
+10:04:26 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:04:26 INFO  : 'configparams force-mem-access 1' command is executed.
+10:04:26 INFO  : Context for 'APU' is selected.
+10:04:26 INFO  : 'ps7_init' command is executed.
+10:04:26 INFO  : 'ps7_post_config' command is executed.
+10:04:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:26 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:04:26 INFO  : 'configparams force-mem-access 0' command is executed.
+10:04:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:04:26 INFO  : Memory regions updated for context APU
+10:04:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:04:26 INFO  : 'con' command is executed.
+10:04:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:04:26 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:05:30 INFO  : Disconnected from the channel tcfchan#1.
+10:05:47 INFO  : Registering command handlers for SDK TCF services
+10:05:47 INFO  : Launching XSCT server: xsct.bat -interactive E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\temp_xsdb_launch_script.tcl
+10:05:48 INFO  : XSCT server has started successfully.
+10:05:48 INFO  : Successfully done setting XSCT server connection channel  
+10:05:48 INFO  : Successfully done setting SDK workspace  
+10:05:48 INFO  : Processing command line option -hwspec E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper.hdf.
+10:05:48 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+10:09:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:09:13 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:09:13 INFO  : 'jtag frequency' command is executed.
+10:09:13 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:09:13 INFO  : Context for 'APU' is selected.
+10:09:14 INFO  : System reset is completed.
+10:09:17 INFO  : 'after 3000' command is executed.
+10:09:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:09:19 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:09:19 INFO  : Context for 'APU' is selected.
+10:09:19 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:09:19 INFO  : 'configparams force-mem-access 1' command is executed.
+10:09:19 INFO  : Context for 'APU' is selected.
+10:09:19 INFO  : 'ps7_init' command is executed.
+10:09:19 INFO  : 'ps7_post_config' command is executed.
+10:09:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:20 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:09:20 INFO  : 'configparams force-mem-access 0' command is executed.
+10:09:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:09:20 INFO  : Memory regions updated for context APU
+10:09:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:20 INFO  : 'con' command is executed.
+10:09:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:09:20 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:10:09 INFO  : Disconnected from the channel tcfchan#1.
+10:10:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:10:10 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:10:10 INFO  : 'jtag frequency' command is executed.
+10:10:10 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:10:10 INFO  : Context for 'APU' is selected.
+10:10:10 INFO  : System reset is completed.
+10:10:13 INFO  : 'after 3000' command is executed.
+10:10:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:10:15 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:10:15 INFO  : Context for 'APU' is selected.
+10:10:17 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:10:17 INFO  : 'configparams force-mem-access 1' command is executed.
+10:10:17 INFO  : Context for 'APU' is selected.
+10:10:18 INFO  : 'ps7_init' command is executed.
+10:10:18 INFO  : 'ps7_post_config' command is executed.
+10:10:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:10:18 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:10:18 INFO  : 'configparams force-mem-access 0' command is executed.
+10:10:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:10:18 INFO  : Memory regions updated for context APU
+10:10:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:10:18 INFO  : 'con' command is executed.
+10:10:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:10:18 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:10:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:10:38 INFO  : Disconnected from the channel tcfchan#2.
+10:10:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:10:39 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:10:39 INFO  : 'jtag frequency' command is executed.
+10:10:39 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:10:39 INFO  : Context for 'APU' is selected.
+10:10:39 INFO  : System reset is completed.
+10:10:42 INFO  : 'after 3000' command is executed.
+10:10:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:10:45 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:10:45 INFO  : Context for 'APU' is selected.
+10:10:46 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:10:46 INFO  : 'configparams force-mem-access 1' command is executed.
+10:10:47 INFO  : Context for 'APU' is selected.
+10:10:47 INFO  : 'ps7_init' command is executed.
+10:10:47 INFO  : 'ps7_post_config' command is executed.
+10:10:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:10:47 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:10:47 INFO  : 'configparams force-mem-access 0' command is executed.
+10:10:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:10:47 INFO  : Memory regions updated for context APU
+10:10:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:10:47 INFO  : 'con' command is executed.
+10:10:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:10:47 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:11:56 INFO  : Disconnected from the channel tcfchan#3.
+10:11:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:11:57 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:11:57 INFO  : 'jtag frequency' command is executed.
+10:11:57 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:11:57 INFO  : Context for 'APU' is selected.
+10:11:57 INFO  : System reset is completed.
+10:12:00 INFO  : 'after 3000' command is executed.
+10:12:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:12:03 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:12:03 INFO  : Context for 'APU' is selected.
+10:12:05 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:12:05 INFO  : 'configparams force-mem-access 1' command is executed.
+10:12:05 INFO  : Context for 'APU' is selected.
+10:12:05 INFO  : 'ps7_init' command is executed.
+10:12:05 INFO  : 'ps7_post_config' command is executed.
+10:12:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:12:05 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:12:05 INFO  : 'configparams force-mem-access 0' command is executed.
+10:12:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:12:05 INFO  : Memory regions updated for context APU
+10:12:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:12:05 INFO  : 'con' command is executed.
+10:12:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:12:05 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:13:41 INFO  : Disconnected from the channel tcfchan#4.
+10:13:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:13:42 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:13:42 INFO  : 'jtag frequency' command is executed.
+10:13:42 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:13:42 INFO  : Context for 'APU' is selected.
+10:13:43 INFO  : System reset is completed.
+10:13:46 INFO  : 'after 3000' command is executed.
+10:13:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:13:48 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:13:48 INFO  : Context for 'APU' is selected.
+10:13:50 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:13:50 INFO  : 'configparams force-mem-access 1' command is executed.
+10:13:50 INFO  : Context for 'APU' is selected.
+10:13:50 INFO  : 'ps7_init' command is executed.
+10:13:50 INFO  : 'ps7_post_config' command is executed.
+10:13:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:13:50 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:13:50 INFO  : 'configparams force-mem-access 0' command is executed.
+10:13:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:13:50 INFO  : Memory regions updated for context APU
+10:13:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:13:51 INFO  : 'con' command is executed.
+10:13:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:13:51 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:14:48 INFO  : Disconnected from the channel tcfchan#5.
+10:14:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:14:49 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:14:49 INFO  : 'jtag frequency' command is executed.
+10:14:49 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:14:49 INFO  : Context for 'APU' is selected.
+10:14:49 INFO  : System reset is completed.
+10:14:52 INFO  : 'after 3000' command is executed.
+10:14:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:14:55 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:14:55 INFO  : Context for 'APU' is selected.
+10:14:57 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:14:57 INFO  : 'configparams force-mem-access 1' command is executed.
+10:14:57 INFO  : Context for 'APU' is selected.
+10:14:57 INFO  : 'ps7_init' command is executed.
+10:14:57 INFO  : 'ps7_post_config' command is executed.
+10:14:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:14:57 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:14:57 INFO  : 'configparams force-mem-access 0' command is executed.
+10:14:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:14:57 INFO  : Memory regions updated for context APU
+10:14:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:14:58 INFO  : 'con' command is executed.
+10:14:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:14:58 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:15:19 INFO  : Disconnected from the channel tcfchan#6.
+10:15:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:15:20 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:15:20 INFO  : 'jtag frequency' command is executed.
+10:15:20 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:15:20 INFO  : Context for 'APU' is selected.
+10:15:20 INFO  : System reset is completed.
+10:15:23 INFO  : 'after 3000' command is executed.
+10:15:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:15:25 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:15:25 INFO  : Context for 'APU' is selected.
+10:15:27 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:15:27 INFO  : 'configparams force-mem-access 1' command is executed.
+10:15:27 INFO  : Context for 'APU' is selected.
+10:15:27 INFO  : 'ps7_init' command is executed.
+10:15:27 INFO  : 'ps7_post_config' command is executed.
+10:15:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:28 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:15:28 INFO  : 'configparams force-mem-access 0' command is executed.
+10:15:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:15:28 INFO  : Memory regions updated for context APU
+10:15:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:15:28 INFO  : 'con' command is executed.
+10:15:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:15:28 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:21:23 INFO  : Disconnected from the channel tcfchan#7.
+10:21:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:21:24 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:21:24 INFO  : 'jtag frequency' command is executed.
+10:21:24 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:21:24 INFO  : Context for 'APU' is selected.
+10:21:24 INFO  : System reset is completed.
+10:21:27 INFO  : 'after 3000' command is executed.
+10:21:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:21:29 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:21:30 INFO  : Context for 'APU' is selected.
+10:21:32 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:21:32 INFO  : 'configparams force-mem-access 1' command is executed.
+10:21:32 INFO  : Context for 'APU' is selected.
+10:21:32 INFO  : 'ps7_init' command is executed.
+10:21:32 INFO  : 'ps7_post_config' command is executed.
+10:21:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:21:32 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:21:32 INFO  : 'configparams force-mem-access 0' command is executed.
+10:21:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:21:32 INFO  : Memory regions updated for context APU
+10:21:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:21:32 INFO  : 'con' command is executed.
+10:21:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:21:32 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:22:02 INFO  : Disconnected from the channel tcfchan#8.
+10:22:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:22:03 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:22:03 INFO  : 'jtag frequency' command is executed.
+10:22:03 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:22:03 INFO  : Context for 'APU' is selected.
+10:22:03 INFO  : System reset is completed.
+10:22:06 INFO  : 'after 3000' command is executed.
+10:22:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:22:09 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:22:09 INFO  : Context for 'APU' is selected.
+10:22:11 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:22:11 INFO  : 'configparams force-mem-access 1' command is executed.
+10:22:11 INFO  : Context for 'APU' is selected.
+10:22:11 INFO  : 'ps7_init' command is executed.
+10:22:11 INFO  : 'ps7_post_config' command is executed.
+10:22:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:11 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:22:11 INFO  : 'configparams force-mem-access 0' command is executed.
+10:22:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:22:11 INFO  : Memory regions updated for context APU
+10:22:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:11 INFO  : 'con' command is executed.
+10:22:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:22:11 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:22:25 INFO  : Disconnected from the channel tcfchan#9.
+10:22:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:22:26 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:22:26 INFO  : 'jtag frequency' command is executed.
+10:22:26 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:22:26 INFO  : Context for 'APU' is selected.
+10:22:26 INFO  : System reset is completed.
+10:22:29 INFO  : 'after 3000' command is executed.
+10:22:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:22:32 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:22:32 INFO  : Context for 'APU' is selected.
+10:22:33 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:22:33 INFO  : 'configparams force-mem-access 1' command is executed.
+10:22:33 INFO  : Context for 'APU' is selected.
+10:22:34 INFO  : 'ps7_init' command is executed.
+10:22:34 INFO  : 'ps7_post_config' command is executed.
+10:22:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:34 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:22:34 INFO  : 'configparams force-mem-access 0' command is executed.
+10:22:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:22:34 INFO  : Memory regions updated for context APU
+10:22:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:34 INFO  : 'con' command is executed.
+10:22:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:22:34 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:23:34 INFO  : Disconnected from the channel tcfchan#10.
+10:23:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:23:35 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:23:35 INFO  : 'jtag frequency' command is executed.
+10:23:35 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:23:35 INFO  : Context for 'APU' is selected.
+10:23:35 INFO  : System reset is completed.
+10:23:39 INFO  : 'after 3000' command is executed.
+10:23:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:23:41 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:23:41 INFO  : Context for 'APU' is selected.
+10:23:43 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:23:43 INFO  : 'configparams force-mem-access 1' command is executed.
+10:23:43 INFO  : Context for 'APU' is selected.
+10:23:43 INFO  : 'ps7_init' command is executed.
+10:23:43 INFO  : 'ps7_post_config' command is executed.
+10:23:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:23:44 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:23:44 INFO  : 'configparams force-mem-access 0' command is executed.
+10:23:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/helloworld/Debug/helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:23:44 INFO  : Memory regions updated for context APU
+10:23:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:23:44 INFO  : 'con' command is executed.
+10:23:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:23:44 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:24:13 INFO  : Disconnected from the channel tcfchan#11.
+10:24:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:24:14 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:24:14 INFO  : 'jtag frequency' command is executed.
+10:24:14 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:24:14 INFO  : Context for 'APU' is selected.
+10:24:15 INFO  : System reset is completed.
+10:24:18 INFO  : 'after 3000' command is executed.
+10:24:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:24:20 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:24:20 INFO  : Context for 'APU' is selected.
+10:24:22 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:24:22 INFO  : 'configparams force-mem-access 1' command is executed.
+10:24:22 INFO  : Context for 'APU' is selected.
+10:24:22 INFO  : 'ps7_init' command is executed.
+10:24:22 INFO  : 'ps7_post_config' command is executed.
+10:24:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:24:22 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:24:22 INFO  : 'configparams force-mem-access 0' command is executed.
+10:24:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:24:22 INFO  : Memory regions updated for context APU
+10:24:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:24:22 INFO  : 'con' command is executed.
+10:24:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:24:22 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:25:28 INFO  : Disconnected from the channel tcfchan#12.
+10:25:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:25:30 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:25:30 INFO  : 'jtag frequency' command is executed.
+10:25:30 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:25:30 INFO  : Context for 'APU' is selected.
+10:25:30 INFO  : System reset is completed.
+10:25:33 INFO  : 'after 3000' command is executed.
+10:25:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:25:35 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+10:25:35 INFO  : Context for 'APU' is selected.
+10:25:37 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:25:37 INFO  : 'configparams force-mem-access 1' command is executed.
+10:25:37 INFO  : Context for 'APU' is selected.
+10:25:38 INFO  : 'ps7_init' command is executed.
+10:25:38 INFO  : 'ps7_post_config' command is executed.
+10:25:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:25:38 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:25:38 INFO  : 'configparams force-mem-access 0' command is executed.
+10:25:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:25:38 INFO  : Memory regions updated for context APU
+10:25:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:25:38 INFO  : 'con' command is executed.
+10:25:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:25:38 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:42:59 INFO  : Disconnected from the channel tcfchan#13.
+10:43:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:43:00 INFO  : 'fpga -state' command is executed.
+10:43:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:43:00 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:43:00 INFO  : 'jtag frequency' command is executed.
+10:43:00 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:43:00 INFO  : Context for 'APU' is selected.
+10:43:02 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:43:02 INFO  : 'configparams force-mem-access 1' command is executed.
+10:43:02 INFO  : Context for 'APU' is selected.
+10:43:02 INFO  : 'stop' command is executed.
+10:43:02 INFO  : 'ps7_init' command is executed.
+10:43:02 INFO  : 'ps7_post_config' command is executed.
+10:43:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:02 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:43:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:03 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:43:03 INFO  : 'configparams force-mem-access 0' command is executed.
+10:43:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:43:03 INFO  : Memory regions updated for context APU
+10:43:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:03 INFO  : 'con' command is executed.
+10:43:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:43:03 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+10:43:28 INFO  : Disconnected from the channel tcfchan#14.
+10:43:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+10:43:29 INFO  : 'fpga -state' command is executed.
+10:43:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:43:29 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:43:29 INFO  : 'jtag frequency' command is executed.
+10:43:29 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:43:29 INFO  : Context for 'APU' is selected.
+10:43:31 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+10:43:31 INFO  : 'configparams force-mem-access 1' command is executed.
+10:43:31 INFO  : Context for 'APU' is selected.
+10:43:31 INFO  : 'stop' command is executed.
+10:43:31 INFO  : 'ps7_init' command is executed.
+10:43:31 INFO  : 'ps7_post_config' command is executed.
+10:43:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:43:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:32 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:43:32 INFO  : 'configparams force-mem-access 0' command is executed.
+10:43:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:43:32 INFO  : Memory regions updated for context APU
+10:43:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:43:32 INFO  : 'con' command is executed.
+10:43:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+10:43:32 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+11:01:51 INFO  : Disconnected from the channel tcfchan#15.
+11:01:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:01:52 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:01:52 INFO  : 'jtag frequency' command is executed.
+11:01:52 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:01:52 INFO  : Context for 'APU' is selected.
+11:01:52 INFO  : System reset is completed.
+11:01:55 INFO  : 'after 3000' command is executed.
+11:01:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+11:01:58 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:01:58 INFO  : Context for 'APU' is selected.
+11:02:00 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:02:00 INFO  : 'configparams force-mem-access 1' command is executed.
+11:02:00 INFO  : Context for 'APU' is selected.
+11:02:00 INFO  : 'ps7_init' command is executed.
+11:02:00 INFO  : 'ps7_post_config' command is executed.
+11:02:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:02:00 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:02:00 INFO  : 'configparams force-mem-access 0' command is executed.
+11:02:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:02:00 INFO  : Memory regions updated for context APU
+11:02:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:02:00 INFO  : 'con' command is executed.
+11:02:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+11:02:00 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+11:31:41 INFO  : Disconnected from the channel tcfchan#16.
+11:31:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:31:42 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:31:42 INFO  : 'jtag frequency' command is executed.
+11:31:42 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:31:42 INFO  : Context for 'APU' is selected.
+11:31:42 INFO  : System reset is completed.
+11:31:45 INFO  : 'after 3000' command is executed.
+11:31:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+11:31:47 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:31:47 INFO  : Context for 'APU' is selected.
+11:31:49 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:31:49 INFO  : 'configparams force-mem-access 1' command is executed.
+11:31:49 INFO  : Context for 'APU' is selected.
+11:31:50 INFO  : 'ps7_init' command is executed.
+11:31:50 INFO  : 'ps7_post_config' command is executed.
+11:31:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:31:50 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:31:50 INFO  : 'configparams force-mem-access 0' command is executed.
+11:31:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:31:50 INFO  : Memory regions updated for context APU
+11:31:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:31:50 INFO  : 'con' command is executed.
+11:31:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+11:31:50 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+11:32:31 INFO  : Disconnected from the channel tcfchan#17.
+11:32:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:32:32 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:32:32 INFO  : 'jtag frequency' command is executed.
+11:32:32 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:32:32 INFO  : Context for 'APU' is selected.
+11:32:32 INFO  : System reset is completed.
+11:32:35 INFO  : 'after 3000' command is executed.
+11:32:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+11:32:37 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:32:37 INFO  : Context for 'APU' is selected.
+11:32:39 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:32:39 INFO  : 'configparams force-mem-access 1' command is executed.
+11:32:39 INFO  : Context for 'APU' is selected.
+11:32:40 INFO  : 'ps7_init' command is executed.
+11:32:40 INFO  : 'ps7_post_config' command is executed.
+11:32:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:32:40 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:32:40 INFO  : 'configparams force-mem-access 0' command is executed.
+11:32:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:32:40 INFO  : Memory regions updated for context APU
+11:32:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:32:40 INFO  : 'con' command is executed.
+11:32:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+11:32:40 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+11:54:16 INFO  : Disconnected from the channel tcfchan#18.
+11:54:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:54:17 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:54:17 INFO  : 'jtag frequency' command is executed.
+11:54:17 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:54:17 INFO  : Context for 'APU' is selected.
+11:54:17 INFO  : System reset is completed.
+11:54:20 INFO  : 'after 3000' command is executed.
+11:54:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+11:54:22 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:54:22 INFO  : Context for 'APU' is selected.
+11:54:24 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:54:24 INFO  : 'configparams force-mem-access 1' command is executed.
+11:54:24 INFO  : Context for 'APU' is selected.
+11:54:25 INFO  : 'ps7_init' command is executed.
+11:54:25 INFO  : 'ps7_post_config' command is executed.
+11:54:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:54:25 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:54:25 INFO  : 'configparams force-mem-access 0' command is executed.
+11:54:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:54:25 INFO  : Memory regions updated for context APU
+11:54:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:54:25 INFO  : 'con' command is executed.
+11:54:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+11:54:25 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+11:54:49 INFO  : Disconnected from the channel tcfchan#19.
+11:54:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+11:54:50 INFO  : 'fpga -state' command is executed.
+11:54:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:54:50 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:54:50 INFO  : 'jtag frequency' command is executed.
+11:54:50 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:54:50 INFO  : Context for 'APU' is selected.
+11:54:52 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:54:52 INFO  : 'configparams force-mem-access 1' command is executed.
+11:54:52 INFO  : Context for 'APU' is selected.
+11:54:52 INFO  : 'stop' command is executed.
+11:54:53 INFO  : 'ps7_init' command is executed.
+11:54:53 INFO  : 'ps7_post_config' command is executed.
+11:54:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:54:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:54:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:54:53 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:54:53 INFO  : 'configparams force-mem-access 0' command is executed.
+11:54:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:54:53 INFO  : Memory regions updated for context APU
+11:54:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:54:53 INFO  : 'con' command is executed.
+11:54:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+11:54:53 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+11:55:52 INFO  : Disconnected from the channel tcfchan#20.
+11:55:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+11:55:53 INFO  : 'fpga -state' command is executed.
+11:55:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:55:53 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:55:53 INFO  : 'jtag frequency' command is executed.
+11:55:53 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:55:53 INFO  : Context for 'APU' is selected.
+11:55:55 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:55:55 INFO  : 'configparams force-mem-access 1' command is executed.
+11:55:55 INFO  : Context for 'APU' is selected.
+11:55:55 INFO  : 'stop' command is executed.
+11:55:56 INFO  : 'ps7_init' command is executed.
+11:55:56 INFO  : 'ps7_post_config' command is executed.
+11:55:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:55:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:55:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:55:56 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:55:56 INFO  : 'configparams force-mem-access 0' command is executed.
+11:55:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:55:56 INFO  : Memory regions updated for context APU
+11:55:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:55:56 INFO  : 'con' command is executed.
+11:55:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+11:55:56 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+11:56:10 INFO  : Disconnected from the channel tcfchan#21.
+11:56:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+11:56:11 INFO  : 'fpga -state' command is executed.
+11:56:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:56:11 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:56:11 INFO  : 'jtag frequency' command is executed.
+11:56:11 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:56:11 INFO  : Context for 'APU' is selected.
+11:56:13 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:56:13 INFO  : 'configparams force-mem-access 1' command is executed.
+11:56:13 INFO  : Context for 'APU' is selected.
+11:56:13 INFO  : 'stop' command is executed.
+11:56:13 INFO  : 'ps7_init' command is executed.
+11:56:13 INFO  : 'ps7_post_config' command is executed.
+11:56:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:13 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:56:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:14 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:56:14 INFO  : 'configparams force-mem-access 0' command is executed.
+11:56:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:56:14 INFO  : Memory regions updated for context APU
+11:56:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:56:14 INFO  : 'con' command is executed.
+11:56:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+11:56:14 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+13:05:24 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1596171839139,  Project:1596090650700
+13:05:24 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:05:37 INFO  : Copied contents of E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+13:05:40 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:05:44 INFO  : 
+13:05:47 INFO  : 
+13:05:48 INFO  : Updating hardware inferred compiler options for helloworld.
+13:05:48 INFO  : Updating hardware inferred compiler options for standalone_bsp_0_xaxidma_example_simple_poll_1.
+13:05:48 INFO  : Clearing existing target manager status.
+13:05:48 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+13:05:49 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+13:05:49 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+13:05:49 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+13:05:49 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+13:05:49 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+13:05:49 INFO  : Closing and re-opening the MSS file of ther project standalone_bsp_0
+13:05:50 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:05:52 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:06:54 INFO  : Disconnected from the channel tcfchan#22.
+13:07:09 INFO  : Registering command handlers for SDK TCF services
+13:07:10 INFO  : Launching XSCT server: xsct.bat -interactive E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\temp_xsdb_launch_script.tcl
+13:07:12 INFO  : XSCT server has started successfully.
+13:07:12 INFO  : Successfully done setting XSCT server connection channel  
+13:07:12 INFO  : Processing command line option -hwspec E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper.hdf.
+13:07:12 INFO  : Successfully done setting SDK workspace  
+13:07:12 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+13:10:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:10:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:10:46 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:10:46 INFO  : 'jtag frequency' command is executed.
+13:10:46 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:10:46 INFO  : Context for 'APU' is selected.
+13:10:47 INFO  : System reset is completed.
+13:10:50 INFO  : 'after 3000' command is executed.
+13:10:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:10:52 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:10:52 INFO  : Context for 'APU' is selected.
+13:10:52 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:10:52 INFO  : 'configparams force-mem-access 1' command is executed.
+13:10:52 INFO  : Context for 'APU' is selected.
+13:10:52 INFO  : 'ps7_init' command is executed.
+13:10:52 INFO  : 'ps7_post_config' command is executed.
+13:10:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:10:53 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:10:53 INFO  : 'configparams force-mem-access 0' command is executed.
+13:10:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:10:53 INFO  : Memory regions updated for context APU
+13:10:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:10:53 INFO  : 'con' command is executed.
+13:10:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:10:53 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+13:14:00 INFO  : Disconnected from the channel tcfchan#1.
+13:14:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:14:01 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:14:01 INFO  : 'jtag frequency' command is executed.
+13:14:01 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:14:01 INFO  : Context for 'APU' is selected.
+13:14:01 INFO  : System reset is completed.
+13:14:04 INFO  : 'after 3000' command is executed.
+13:14:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:14:07 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:14:07 INFO  : Context for 'APU' is selected.
+13:14:09 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:14:09 INFO  : 'configparams force-mem-access 1' command is executed.
+13:14:09 INFO  : Context for 'APU' is selected.
+13:14:09 INFO  : 'ps7_init' command is executed.
+13:14:09 INFO  : 'ps7_post_config' command is executed.
+13:14:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:14:09 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:14:09 INFO  : 'configparams force-mem-access 0' command is executed.
+13:14:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:14:09 INFO  : Memory regions updated for context APU
+13:14:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:14:09 INFO  : 'con' command is executed.
+13:14:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:14:09 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+14:16:23 INFO  : Disconnected from the channel tcfchan#2.
+14:16:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:16:33 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:16:33 INFO  : 'jtag frequency' command is executed.
+14:16:33 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:16:33 INFO  : Context for 'APU' is selected.
+14:16:33 INFO  : System reset is completed.
+14:16:36 INFO  : 'after 3000' command is executed.
+14:16:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+14:16:39 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:16:39 INFO  : Context for 'APU' is selected.
+14:16:41 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:16:41 INFO  : 'configparams force-mem-access 1' command is executed.
+14:16:41 INFO  : Context for 'APU' is selected.
+14:16:42 INFO  : 'ps7_init' command is executed.
+14:16:42 INFO  : 'ps7_post_config' command is executed.
+14:16:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:42 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:16:42 INFO  : 'configparams force-mem-access 0' command is executed.
+14:16:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:16:42 INFO  : Memory regions updated for context APU
+14:16:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:16:42 INFO  : 'con' command is executed.
+14:16:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+14:16:42 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
+14:16:52 INFO  : Disconnected from the channel tcfchan#3.
+14:16:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:16:54 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:16:54 INFO  : 'jtag frequency' command is executed.
+14:16:54 INFO  : Sourcing of 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:16:54 INFO  : Context for 'APU' is selected.
+14:16:54 INFO  : System reset is completed.
+14:16:57 INFO  : 'after 3000' command is executed.
+14:16:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+14:16:59 INFO  : FPGA configured successfully with bitstream "E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+14:16:59 INFO  : Context for 'APU' is selected.
+14:17:01 INFO  : Hardware design information is loaded from 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:17:01 INFO  : 'configparams force-mem-access 1' command is executed.
+14:17:01 INFO  : Context for 'APU' is selected.
+14:17:02 INFO  : 'ps7_init' command is executed.
+14:17:02 INFO  : 'ps7_post_config' command is executed.
+14:17:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:02 INFO  : The application 'E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:17:02 INFO  : 'configparams force-mem-access 0' command is executed.
+14:17:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow E:/vivado2018_project/axi4stream_demo/axi4stream_demo.sdk/standalone_bsp_0_xaxidma_example_simple_poll_1/Debug/standalone_bsp_0_xaxidma_example_simple_poll_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:17:02 INFO  : Memory regions updated for context APU
+14:17:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:17:02 INFO  : 'con' command is executed.
+14:17:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+14:17:02 INFO  : Launch script is exported to file 'E:\vivado2018_project\axi4stream_demo\axi4stream_demo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_helloworld.elf_on_local.tcl'
